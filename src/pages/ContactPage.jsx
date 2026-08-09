@@ -15,25 +15,25 @@ export default function ContactPage() {
         Call for the fastest answer, or send the estimate form and Steve will call you back. Free quotes, no pressure.
       </PageHero>
 
-      <section className="px-5 py-12 lg:py-16">
+      <section className="px-4 py-10 sm:px-5 sm:py-12 lg:py-16">
         <div className="mx-auto grid max-w-7xl gap-10 lg:grid-cols-[0.9fr_1.1fr]">
           <div>
-            <div className="rounded-md bg-ink p-8 text-white">
+            <div className="rounded-md bg-ink p-6 text-white sm:p-8">
               <p className="text-xs font-semibold uppercase tracking-[0.16em] text-lotus-500">Call us</p>
               <a
                 href={business.phoneHref}
                 aria-label="Call Green Lotus Landscape"
-                className="mt-3 block font-display text-4xl font-semibold leading-tight hover:text-lotus-500 sm:text-5xl"
+                className="mt-3 block font-display text-3xl font-semibold leading-tight hover:text-lotus-500 sm:text-4xl lg:text-5xl"
               >
                 {business.phoneDisplay}
               </a>
-              <p className="mt-4 leading-7 text-white/75">
+              <p className="mt-4 text-sm leading-7 text-white/75 sm:text-base">
                 Free quotes, no pressure. Ask about {business.seasonalOffer}.
               </p>
               <a
                 href={business.phoneHref}
                 aria-label="Call Green Lotus Landscape for a free quote"
-                className="mt-6 inline-flex items-center gap-2 rounded-md bg-lotus-500 px-6 py-3 font-bold text-white transition hover:bg-lotus-400"
+                className="mt-6 inline-flex min-h-12 w-full items-center justify-center gap-2 rounded-md bg-lotus-500 px-6 py-3 font-semibold text-white transition hover:bg-lotus-400 sm:w-auto"
               >
                 <Phone className="h-5 w-5" aria-hidden="true" />
                 Tap to call

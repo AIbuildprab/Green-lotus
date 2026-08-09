@@ -78,8 +78,11 @@ export const services = [
   {
     slug: "lawn-maintenance",
     title: "Lawn Maintenance",
+    shortLabel: "Lawn care",
     icon: Leaf,
     summary: "Bi-weekly mowing, clean edges, and steady weeding so the yard always looks looked-after.",
+    bestFor: "Homeowners who want a tidy lawn on a regular schedule without chasing different crews.",
+    timing: "Weekly or bi-weekly in season",
     description:
       "Most of our neighbours start here. We handle mowing on a schedule that suits your lawn, keep the edges crisp along walkways and beds, and stay on top of weeds before they take hold. You get the same crew each visit, so nothing has to be re-explained.",
     points: [
@@ -97,8 +100,11 @@ export const services = [
   {
     slug: "hedge-garden-care",
     title: "Hedge & Garden Care",
+    shortLabel: "Hedges & gardens",
     icon: Trees,
     summary: "Hedge trimming, pruning, and general garden upkeep that keeps everything in shape.",
+    bestFor: "Properties with hedges, shrubs, or beds that need shaping and seasonal care.",
+    timing: "As needed through the growing season",
     description:
       "Hedges and shrubs get away from you fast on the coast. We shape hedges cleanly, prune with the plant's health in mind, and keep beds looking cared for through the growing season. If you are not sure what needs cutting back, Steve will walk it with you and say so plainly.",
     points: [
@@ -116,8 +122,11 @@ export const services = [
   {
     slug: "hardscaping-repairs",
     title: "Hardscaping & Repairs",
+    shortLabel: "Hardscaping",
     icon: BrickWall,
     summary: "Retaining walls, garden blocks, and the structural fixes that keep a yard usable.",
+    bestFor: "Walls, borders, or pathways that are leaning, sinking, or starting to fail.",
+    timing: "Quoted per job after a site visit",
     description:
       "When a wall starts leaning or blocks work loose, it usually will not fix itself. We build and repair retaining walls and garden block work, and sort out the drainage and grading issues that caused the problem in the first place.",
     points: [
@@ -135,8 +144,11 @@ export const services = [
   {
     slug: "seasonal-cleanups",
     title: "Seasonal Cleanups",
+    shortLabel: "Seasonal cleanups",
     icon: Shovel,
     summary: "Pre-season and post-season cleanups that reset the whole property in a day or two.",
+    bestFor: "Spring or fall resets, guest-ready yards, and one-time catch-up jobs.",
+    timing: "Spring and fall (book 2–3 weeks ahead)",
     description:
       "Spring and fall are when a yard either gets ahead or falls behind. We clear leaves and debris, cut back what needs it, tidy the beds, and leave the property ready for the season. Popular with clients getting a place ready for guests or for sale.",
     points: [

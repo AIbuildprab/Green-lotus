@@ -83,7 +83,7 @@ export default function Lightbox({ items, activeIndex, onClose, onPrev, onNext }
           </button>
 
           <div className="text-center">
-            <p className="text-xs font-semibold uppercase tracking-normalst text-lotus-500">{item.category}</p>
+            <p className="text-xs font-semibold uppercase tracking-[0.16em] text-lotus-500">{item.category}</p>
             <p className="mt-1 font-display text-lg font-bold text-white">{item.caption}</p>
           </div>
 

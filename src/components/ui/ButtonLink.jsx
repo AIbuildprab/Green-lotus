@@ -20,7 +20,7 @@ export default function ButtonLink({
   to,
   ...props
 }) {
-  const classes = `inline-flex items-center justify-center gap-2 rounded-md font-semibold transition ${variants[variant]} ${sizes[size]} ${className}`;
+  const classes = `inline-flex items-center justify-center gap-2 rounded-md font-semibold transition duration-300 ease-out ${variants[variant]} ${sizes[size]} ${className}`;
 
   if (to) {
     return (

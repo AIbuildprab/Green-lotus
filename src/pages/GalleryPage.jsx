@@ -100,7 +100,7 @@ export default function GalleryPage() {
                   className="h-56 w-full object-cover transition group-hover:scale-[1.02]"
                 />
                 <span className="block p-5">
-                  <span className="text-xs font-semibold uppercase tracking-normalst text-lotus-500">
+                  <span className="text-xs font-semibold uppercase tracking-[0.16em] text-lotus-500">
                     {item.category}
                   </span>
                   <span className="mt-2 block font-semibold text-ink">{item.caption}</span>

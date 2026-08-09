@@ -5,7 +5,7 @@ import { business, fullAddress, hours, navLinks } from "../../data/siteContent.j
 
 export default function Footer() {
   return (
-    <footer className="bg-ink-deep px-5 py-14 pb-28 text-white lg:pb-14">
+    <footer className="bg-ink-deep px-4 py-12 pb-28 text-white sm:px-5 sm:py-14 lg:pb-14">
       <div className="mx-auto grid max-w-7xl gap-10 md:grid-cols-2 lg:grid-cols-4">
         <div>
           <Link to="/" className="flex items-center gap-3" aria-label="Green Lotus Landscape home">
