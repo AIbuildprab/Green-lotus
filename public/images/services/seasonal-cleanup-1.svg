@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900" width="1200" height="900" preserveAspectRatio="xMidYMid slice">
+  <rect width="1200" height="900" fill="#F7F5EE"/>
+  <rect y="640" width="1200" height="260" fill="#E2EBD3"/>
+  <g fill="#C9A227" opacity="0.55">
+    <ellipse cx="200" cy="700" rx="46" ry="26" transform="rotate(-18 200 700)"/>
+    <ellipse cx="330" cy="748" rx="42" ry="24" transform="rotate(12 330 748)"/>
+    <ellipse cx="470" cy="694" rx="48" ry="26" transform="rotate(-8 470 694)"/>
+    <ellipse cx="620" cy="756" rx="40" ry="22" transform="rotate(22 620 756)"/>
+    <ellipse cx="770" cy="706" rx="46" ry="26" transform="rotate(-14 770 706)"/>
+  </g>
+  <circle cx="980" cy="240" r="104" fill="#EAF1E0"/>
+  <rect x="90" y="500" width="300" height="14" rx="7" fill="#7CB342" opacity="0.5"/>
+  <text x="90" y="580" font-family="Poppins, Inter, sans-serif" font-size="40" font-weight="700" fill="#141414">Fall cleanup</text>
+  <text x="90" y="628" font-family="Inter, sans-serif" font-size="28" fill="#141414" opacity="0.65">seasonal-cleanup-1.jpg</text>
+</svg>

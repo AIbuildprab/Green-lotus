@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900" width="1200" height="900" preserveAspectRatio="xMidYMid slice">
+  <rect width="1200" height="900" fill="#F7F7F2"/>
+  <path d="M0 560 L1200 500 L1200 900 L0 900 Z" fill="#DCE8CB"/>
+  <path d="M0 620 L1200 560" stroke="#7CB342" stroke-width="10" opacity="0.4" fill="none"/>
+  <rect x="700" y="240" width="380" height="240" rx="18" fill="#EDF2E5"/>
+  <circle cx="250" cy="260" r="90" fill="#E8F0DE"/>
+  <rect x="90" y="700" width="330" height="14" rx="7" fill="#7CB342" opacity="0.5"/>
+  <text x="90" y="790" font-family="Poppins, Inter, sans-serif" font-size="40" font-weight="700" fill="#141414">Edging detail</text>
+  <text x="90" y="840" font-family="Inter, sans-serif" font-size="28" fill="#141414" opacity="0.65">lawn-maintenance-2.jpg</text>
+</svg>

@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900" width="1200" height="900" preserveAspectRatio="xMidYMid slice">
+  <rect width="1200" height="900" fill="#F5F5F0"/>
+  <rect y="520" width="1200" height="380" fill="#DDE9CC"/>
+  <rect y="520" width="1200" height="24" fill="#7CB342" opacity="0.35"/>
+  <circle cx="980" cy="220" r="100" fill="#EAF2DF"/>
+  <g opacity="0.7" fill="#8BC34A">
+    <rect x="120" y="600" width="10" height="70" rx="5"/>
+    <rect x="170" y="580" width="10" height="90" rx="5"/>
+    <rect x="220" y="610" width="10" height="60" rx="5"/>
+    <rect x="270" y="590" width="10" height="80" rx="5"/>
+  </g>
+  <rect x="90" y="700" width="380" height="14" rx="7" fill="#7CB342" opacity="0.5"/>
+  <text x="90" y="790" font-family="Poppins, Inter, sans-serif" font-size="40" font-weight="700" fill="#141414">Lawn maintenance</text>
+  <text x="90" y="840" font-family="Inter, sans-serif" font-size="28" fill="#141414" opacity="0.65">lawn-maintenance-1.jpg</text>
+</svg>

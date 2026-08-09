@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900" width="1200" height="900" preserveAspectRatio="xMidYMid slice">
+  <rect width="1200" height="900" fill="#F5F5F0"/>
+  <rect y="600" width="1200" height="300" fill="#E3EDD6"/>
+  <circle cx="1000" cy="190" r="110" fill="#EAF2DF"/>
+  <path d="M0 640 Q300 580 620 630 T1200 610 L1200 900 L0 900 Z" fill="#D8E7C6"/>
+  <path d="M150 620 c0-70 55-125 125-125 0 70-55 125-125 125 z" fill="#8BC34A" opacity="0.85"/>
+  <rect x="90" y="700" width="420" height="14" rx="7" fill="#7CB342" opacity="0.5"/>
+  <text x="90" y="790" font-family="Poppins, Inter, sans-serif" font-size="42" font-weight="700" fill="#141414">Project photo</text>
+  <text x="90" y="840" font-family="Inter, sans-serif" font-size="28" fill="#141414" opacity="0.65">landscape-project-1.jpg</text>
+</svg>

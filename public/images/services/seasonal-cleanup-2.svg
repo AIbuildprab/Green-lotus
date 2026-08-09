@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900" width="1200" height="900" preserveAspectRatio="xMidYMid slice">
+  <rect width="1200" height="900" fill="#F5F6F0"/>
+  <rect y="580" width="1200" height="320" fill="#DDE8CD"/>
+  <rect x="120" y="600" width="960" height="150" rx="24" fill="#B99777" opacity="0.45"/>
+  <path d="M0 620 Q600 570 1200 615 L1200 900 L0 900 Z" fill="#D5E4C1" opacity="0.8"/>
+  <circle cx="940" cy="230" r="92" fill="#EAF2DF"/>
+  <rect x="90" y="440" width="260" height="14" rx="7" fill="#7CB342" opacity="0.5"/>
+  <text x="90" y="522" font-family="Poppins, Inter, sans-serif" font-size="40" font-weight="700" fill="#141414">Spring reset</text>
+  <text x="90" y="570" font-family="Inter, sans-serif" font-size="28" fill="#141414" opacity="0.65">seasonal-cleanup-2.jpg</text>
+</svg>

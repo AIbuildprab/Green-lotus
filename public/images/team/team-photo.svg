@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900" width="1200" height="900" preserveAspectRatio="xMidYMid slice">
+  <rect width="1200" height="900" fill="#F5F5F0"/>
+  <rect y="660" width="1200" height="240" fill="#DFEAD0"/>
+  <g fill="#CBDCB6">
+    <circle cx="420" cy="380" r="86"/>
+    <path d="M300 660 c0-66 54-120 120-120 s120 54 120 120 z"/>
+    <circle cx="620" cy="350" r="94"/>
+    <path d="M492 660 c0-70 58-128 128-128 s128 58 128 128 z"/>
+    <circle cx="820" cy="380" r="86"/>
+    <path d="M700 660 c0-66 54-120 120-120 s120 54 120 120 z"/>
+  </g>
+  <rect x="90" y="716" width="240" height="14" rx="7" fill="#7CB342" opacity="0.5"/>
+  <text x="90" y="798" font-family="Poppins, Inter, sans-serif" font-size="40" font-weight="700" fill="#141414">The crew</text>
+  <text x="90" y="846" font-family="Inter, sans-serif" font-size="28" fill="#141414" opacity="0.65">team-photo.jpg</text>
+</svg>

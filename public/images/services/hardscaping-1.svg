@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900" width="1200" height="900" preserveAspectRatio="xMidYMid slice">
+  <rect width="1200" height="900" fill="#F5F4EF"/>
+  <rect y="680" width="1200" height="220" fill="#E0EAD2"/>
+  <g fill="#D9CDBC" stroke="#F5F4EF" stroke-width="8">
+    <rect x="80" y="380" width="240" height="90"/>
+    <rect x="330" y="380" width="240" height="90"/>
+    <rect x="580" y="380" width="240" height="90"/>
+    <rect x="830" y="380" width="240" height="90"/>
+    <rect x="80" y="480" width="180" height="90"/>
+    <rect x="270" y="480" width="240" height="90"/>
+    <rect x="520" y="480" width="240" height="90"/>
+    <rect x="770" y="480" width="240" height="90"/>
+    <rect x="80" y="580" width="240" height="90"/>
+    <rect x="330" y="580" width="240" height="90"/>
+    <rect x="580" y="580" width="240" height="90"/>
+    <rect x="830" y="580" width="240" height="90"/>
+  </g>
+  <circle cx="1010" cy="200" r="86" fill="#EAF1E0"/>
+  <rect x="90" y="720" width="280" height="14" rx="7" fill="#7CB342" opacity="0.5"/>
+  <text x="90" y="800" font-family="Poppins, Inter, sans-serif" font-size="40" font-weight="700" fill="#141414">Retaining wall</text>
+  <text x="90" y="848" font-family="Inter, sans-serif" font-size="28" fill="#141414" opacity="0.65">hardscaping-1.jpg</text>
+</svg>
