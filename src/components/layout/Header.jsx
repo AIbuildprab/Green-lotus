@@ -9,6 +9,7 @@ import { business, navLinks, services } from "../../data/siteContent.js";
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
   const [servicesOpen, setServicesOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
   const { pathname } = useLocation();
 
   useEffect(() => {
@@ -23,8 +24,15 @@ export default function Header() {
     };
   }, [isOpen]);
 
+  useEffect(() => {
+    const onScroll = () => setScrolled(window.scrollY > 24);
+    onScroll();
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
+
   const linkClasses = ({ isActive }) =>
-    `text-sm font-semibold transition ${
+    `text-sm font-semibold transition duration-300 ${
       isActive
         ? "text-ink underline decoration-lotus-500 decoration-2 underline-offset-8"
         : "text-ink/65 hover:text-ink"
@@ -36,7 +44,13 @@ export default function Header() {
   };
 
   return (
-    <header className="sticky top-0 z-50 border-b border-ink/10 bg-white/95 backdrop-blur-md">
+    <header
+      className={`sticky top-0 z-50 border-b backdrop-blur-xl transition-[background-color,border-color,box-shadow] duration-500 ${
+        scrolled || isOpen
+          ? "border-ink/10 bg-white/80 shadow-[0_10px_30px_rgba(0,0,0,0.06)]"
+          : "border-transparent bg-white/35"
+      }`}
+    >
       <div className="mx-auto flex max-w-7xl items-center justify-between gap-3 px-4 py-2.5 sm:gap-4 sm:px-5 sm:py-3">
         <Link to="/" className="flex min-w-0 items-center gap-2.5 sm:gap-3" aria-label="Green Lotus Landscape home">
           <span className="grid h-10 w-10 shrink-0 place-items-center rounded-md bg-ink-deep text-lotus-500 sm:h-11 sm:w-11">
@@ -68,7 +82,7 @@ export default function Header() {
           <a
             href={business.phoneHref}
             aria-label="Call Green Lotus Landscape"
-            className="inline-flex items-center gap-2 text-sm font-semibold text-ink hover:text-ink/70"
+            className="inline-flex items-center gap-2 text-sm font-semibold text-ink transition hover:text-ink/70"
           >
             <Phone className="h-4 w-4 text-lotus-500" aria-hidden="true" />
             {business.phoneDisplay}
@@ -79,16 +93,9 @@ export default function Header() {
         </div>
 
         <div className="flex items-center gap-2 lg:hidden">
-          <a
-            href={business.phoneHref}
-            aria-label="Call Green Lotus Landscape"
-            className="inline-flex h-11 w-11 items-center justify-center rounded-md bg-lotus-500 text-white"
-          >
-            <Phone className="h-5 w-5" aria-hidden="true" />
-          </a>
           <button
             type="button"
-            className="inline-flex h-11 w-11 items-center justify-center rounded-md border border-ink/15 text-ink"
+            className="inline-flex h-11 w-11 items-center justify-center rounded-md border border-ink/15 bg-white/50 text-ink backdrop-blur-sm transition hover:bg-white/80"
             aria-label={isOpen ? "Close navigation menu" : "Open navigation menu"}
             aria-expanded={isOpen}
             aria-controls="mobile-nav"
@@ -102,7 +109,7 @@ export default function Header() {
       {isOpen ? (
         <nav
           id="mobile-nav"
-          className="animate-panel-down absolute inset-x-0 top-full max-h-[calc(100dvh-3.5rem)] overflow-y-auto border-t border-ink/10 bg-white px-4 py-4 shadow-soft lg:hidden"
+          className="animate-panel-down absolute inset-x-0 top-full max-h-[calc(100dvh-3.5rem)] overflow-y-auto border-t border-ink/10 bg-white/90 px-4 py-4 shadow-soft backdrop-blur-xl lg:hidden"
           aria-label="Mobile"
         >
           {navLinks.map((link) =>

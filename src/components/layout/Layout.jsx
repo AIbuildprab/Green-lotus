@@ -1,7 +1,7 @@
 import { Outlet } from "react-router-dom";
 import Footer from "./Footer.jsx";
 import Header from "./Header.jsx";
-import StickyMobileCta from "./StickyMobileCta.jsx";
+import StickyGlassNav from "./StickyGlassNav.jsx";
 
 export default function Layout() {
   return (
@@ -13,11 +13,11 @@ export default function Layout() {
         Skip to main content
       </a>
       <Header />
-      <main id="main" className="flex-1 pb-[calc(5.5rem+env(safe-area-inset-bottom))] lg:pb-0">
+      <main id="main" className="flex-1 pb-[calc(6.25rem+env(safe-area-inset-bottom))]">
         <Outlet />
       </main>
       <Footer />
-      <StickyMobileCta />
+      <StickyGlassNav />
     </div>
   );
 }

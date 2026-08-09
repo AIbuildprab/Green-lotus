@@ -207,6 +207,11 @@ details[open] .faq-answer {
   grid-template-rows: 1fr;
 }
 
+.glass-dock {
+  -webkit-backdrop-filter: blur(18px) saturate(1.35);
+  backdrop-filter: blur(18px) saturate(1.35);
+}
+
 .bg-grain {
   background-image:
     radial-gradient(ellipse at top, rgba(139, 195, 74, 0.12), transparent 55%),
