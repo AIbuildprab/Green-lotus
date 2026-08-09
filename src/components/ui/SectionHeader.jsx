@@ -8,8 +8,10 @@ export default function SectionHeader({ eyebrow, title, children, align = "cente
       {eyebrow ? (
         <p className="text-xs font-semibold uppercase tracking-[0.16em] text-lotus-500">{eyebrow}</p>
       ) : null}
-      <h2 className={`mt-3 font-display text-3xl font-semibold leading-tight sm:text-4xl ${titleColor}`}>{title}</h2>
-      {children ? <p className={`mt-4 text-base leading-7 ${bodyColor}`}>{children}</p> : null}
+      <h2 className={`mt-3 font-display text-[1.75rem] font-semibold leading-tight sm:text-3xl lg:text-4xl ${titleColor}`}>
+        {title}
+      </h2>
+      {children ? <p className={`mt-3 text-sm leading-7 sm:mt-4 sm:text-base ${bodyColor}`}>{children}</p> : null}
     </div>
   );
 }

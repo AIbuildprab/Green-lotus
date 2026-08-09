@@ -3,7 +3,7 @@ import { useState } from "react";
 import { estimateOptions, services } from "../../data/siteContent.js";
 
 const fieldClasses =
-  "w-full rounded-md border border-ink/15 bg-white px-4 py-3 text-ink placeholder:text-ink/40 focus:border-lotus-500 focus:outline-none";
+  "w-full rounded-md border border-ink/15 bg-white px-4 py-3.5 text-base text-ink placeholder:text-ink/40 focus:border-lotus-500 focus:outline-none";
 
 export default function QuoteForm() {
   const [isSubmitted, setIsSubmitted] = useState(false);
@@ -17,9 +17,9 @@ export default function QuoteForm() {
   };
 
   return (
-    <form onSubmit={handleSubmit} className="grid gap-4 rounded-md border border-ink/10 bg-paper p-6 lg:p-8">
+    <form onSubmit={handleSubmit} className="grid gap-4 rounded-md border border-ink/10 bg-paper p-5 sm:p-6 lg:p-8">
       <div>
-        <h2 className="font-display text-2xl font-semibold text-ink">Get a free estimate</h2>
+        <h2 className="font-display text-xl font-semibold text-ink sm:text-2xl">Get a free estimate</h2>
         <p className="mt-2 leading-7 text-ink/75">
           Tell us the basics and we will call you back with next steps. Calling is still the fastest way to reach us.
         </p>
@@ -125,7 +125,7 @@ export default function QuoteForm() {
 
       <button
         type="submit"
-        className="mt-2 inline-flex items-center justify-center rounded-md bg-lotus-500 px-6 py-3 font-bold text-white transition hover:bg-lotus-400"
+        className="mt-2 inline-flex min-h-12 w-full items-center justify-center rounded-md bg-lotus-500 px-6 py-3 font-semibold text-white transition hover:bg-lotus-400 sm:w-auto"
       >
         Request my free estimate
       </button>
