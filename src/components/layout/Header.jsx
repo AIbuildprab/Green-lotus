@@ -4,6 +4,7 @@ import { ChevronDown, Menu, Phone, X } from "lucide-react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
+import { isActivePath } from "../../lib/paths";
 import ButtonLink from "../ui/ButtonLink";
 import LotusMark from "../ui/LotusMark";
 import ServicesNavMenu from "./ServicesNavMenu";
@@ -78,7 +79,7 @@ export default function Header() {
               <Link
                 key={link.to}
                 href={link.to}
-                className={navLinkClass(link.to === "/" ? pathname === "/" : pathname.startsWith(link.to))}
+                className={navLinkClass(isActivePath(pathname, link.to))}
               >
                 {link.label}
               </Link>
@@ -162,9 +163,7 @@ export default function Header() {
                 key={link.to}
                 href={link.to}
                 className={`block rounded-md px-3 py-3.5 text-base font-semibold ${
-                  (link.to === "/" ? pathname === "/" : pathname.startsWith(link.to))
-                    ? "bg-paper text-ink"
-                    : "text-ink/75"
+                  isActivePath(pathname, link.to) ? "bg-paper text-ink" : "text-ink/75"
                 }`}
                 onClick={closeMenu}
               >

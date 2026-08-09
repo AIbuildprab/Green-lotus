@@ -24,6 +24,10 @@ export default function ButtonLink({
   const classes = `inline-flex items-center justify-center gap-2 rounded-md font-semibold transition duration-300 ease-out ${variants[variant]} ${sizes[size]} ${className}`;
   const destination = to || href;
 
+  if (!destination) {
+    throw new Error("ButtonLink requires a `to` or `href` prop.");
+  }
+
   if (to) {
     return (
       <Link href={to} className={classes} {...props}>

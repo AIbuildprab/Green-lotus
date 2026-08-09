@@ -4,6 +4,7 @@ import { ChevronDown } from "lucide-react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useId, useRef, useState } from "react";
+import { isActivePath } from "../../lib/paths";
 import { services } from "../../data/siteContent";
 
 export default function ServicesNavMenu({ onNavigate }) {
@@ -11,7 +12,7 @@ export default function ServicesNavMenu({ onNavigate }) {
   const menuId = useId();
   const rootRef = useRef(null);
   const pathname = usePathname();
-  const isServicesActive = pathname.startsWith("/services");
+  const isServicesActive = isActivePath(pathname, "/services");
 
   useEffect(() => {
     setOpen(false);

@@ -3,7 +3,7 @@ import Link from "next/link";
 import { galleryItems } from "../../data/siteContent";
 
 export default function GalleryPreview() {
-  const featured = galleryItems.slice(0, 6);
+  const featured = galleryItems.filter((item) => item.featured).slice(0, 6);
 
   return (
     <section className="bg-ink-deep px-5 py-16 text-white lg:py-24">
@@ -15,7 +15,7 @@ export default function GalleryPreview() {
               Yards we have brought back into shape.
             </h2>
             <p className="mt-4 max-w-xl text-white/70">
-              A look at the kind of outdoor spaces we restore around Vancouver.
+              Real jobs from around Vancouver — lawns, beds, walls, and full backyard resets.
             </p>
           </div>
           <Link
@@ -27,7 +27,7 @@ export default function GalleryPreview() {
           </Link>
         </div>
 
-        <div className="grid auto-rows-[220px] gap-3 sm:grid-cols-2 lg:grid-cols-3 lg:auto-rows-[260px]">
+        <div className="grid auto-rows-[200px] gap-2.5 sm:auto-rows-[220px] sm:grid-cols-2 sm:gap-3 lg:grid-cols-3 lg:auto-rows-[260px]">
           {featured.map((item, index) => (
             <figure
               key={item.id}
@@ -42,13 +42,14 @@ export default function GalleryPreview() {
                 height="900"
                 loading="lazy"
                 decoding="async"
-                className="h-full w-full object-cover transition duration-700 group-hover:scale-105"
+                sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                className="h-full w-full object-cover object-center transition duration-700 group-hover:scale-105"
               />
-              <figcaption className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/85 to-transparent p-5 pt-16">
-                <span className="text-xs font-semibold uppercase tracking-[0.14em] text-lotus-400">
+              <figcaption className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/85 to-transparent p-4 pt-12 sm:p-5 sm:pt-16">
+                <span className="text-[11px] font-semibold uppercase tracking-[0.14em] text-lotus-400 sm:text-xs">
                   {item.category}
                 </span>
-                <p className="mt-1 font-semibold text-white">{item.caption}</p>
+                <p className="mt-1 text-sm font-semibold text-white sm:text-base">{item.caption}</p>
               </figcaption>
             </figure>
           ))}

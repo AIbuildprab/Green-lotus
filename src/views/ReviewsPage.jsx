@@ -11,7 +11,7 @@ export default function ReviewsPage() {
   return (
     <>
       <PageHero eyebrow="Reviews" title={`${rating.score} stars from ${rating.count} Vancouver neighbours.`}>
-        Named highlights from recent Google reviews. Drop in a live Google embed below when you have the listing URL.
+        Real Google reviews from homeowners and neighbours who have worked with Steve and the crew.
       </PageHero>
 
       <section className="px-5 py-12 lg:py-16">
@@ -59,7 +59,7 @@ export default function ReviewsPage() {
       <section className="px-5 pb-16">
         <div className="mx-auto max-w-7xl">
           <SectionHeader eyebrow="In their words" title="Highlights from recent reviews." align="left">
-            Lightly edited for length. Full reviews live on our Google listing.
+            Recent Google reviews from neighbours across Vancouver. Full listing lives on Google.
           </SectionHeader>
 
           <div className="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">

@@ -40,9 +40,9 @@ export default function ProjectStories() {
                       loading="lazy"
                       decoding="async"
                       sizes="(max-width: 1024px) 50vw, 35vw"
-                      className="aspect-[4/3] h-full w-full object-cover transition duration-700 hover:scale-105"
+                      className="aspect-square h-full w-full object-cover object-center transition duration-700 hover:scale-105 sm:aspect-[4/3]"
                     />
-                    <figcaption className="absolute left-2 top-2 rounded-md bg-black/75 px-2 py-1 text-[10px] font-semibold uppercase tracking-[0.12em] text-white sm:left-3 sm:top-3 sm:px-3 sm:text-xs">
+                    <figcaption className="absolute left-1.5 top-1.5 rounded-md bg-black/75 px-2 py-1 text-[10px] font-semibold uppercase tracking-[0.12em] text-white sm:left-3 sm:top-3 sm:px-3 sm:text-xs">
                       Before
                     </figcaption>
                   </figure>
@@ -55,19 +55,23 @@ export default function ProjectStories() {
                       loading="lazy"
                       decoding="async"
                       sizes="(max-width: 1024px) 50vw, 35vw"
-                      className="aspect-[4/3] h-full w-full object-cover transition duration-700 hover:scale-105"
+                      className="aspect-square h-full w-full object-cover object-center transition duration-700 hover:scale-105 sm:aspect-[4/3]"
                     />
-                    <figcaption className="absolute left-2 top-2 rounded-md bg-lotus-500 px-2 py-1 text-[10px] font-semibold uppercase tracking-[0.12em] text-white sm:left-3 sm:top-3 sm:px-3 sm:text-xs">
+                    <figcaption className="absolute left-1.5 top-1.5 rounded-md bg-lotus-500 px-2 py-1 text-[10px] font-semibold uppercase tracking-[0.12em] text-white sm:left-3 sm:top-3 sm:px-3 sm:text-xs">
                       After
                     </figcaption>
                   </figure>
                 </div>
 
-                <div className="flex flex-col justify-center p-5 sm:p-6 lg:p-8">
-                  <p className="text-xs font-semibold uppercase tracking-[0.14em] text-lotus-600">{project.service}</p>
-                  <h3 className="mt-2 font-display text-xl font-semibold text-ink sm:text-2xl">{project.title}</h3>
+                <div className="flex flex-col justify-center p-4 sm:p-6 lg:p-8">
+                  <p className="text-[11px] font-semibold uppercase tracking-[0.14em] text-lotus-600 sm:text-xs">
+                    {project.service}
+                  </p>
+                  <h3 className="mt-1.5 font-display text-lg font-semibold text-ink sm:mt-2 sm:text-2xl">
+                    {project.title}
+                  </h3>
                   <p className="mt-1 text-sm font-semibold text-ink/60">{project.neighbourhood}</p>
-                  <p className="mt-3 text-sm leading-7 text-ink/75 sm:mt-4">{project.scope}</p>
+                  <p className="mt-2 text-sm leading-6 text-ink/75 sm:mt-4 sm:leading-7">{project.scope}</p>
                 </div>
               </article>
             </Reveal>

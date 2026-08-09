@@ -4,6 +4,7 @@ import { Home, Images, MessageCircle, Phone, Wrench } from "lucide-react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
+import { isActivePath } from "../../lib/paths";
 import { business } from "../../data/siteContent";
 
 const dockLinks = [
@@ -57,7 +58,7 @@ export default function StickyGlassNav() {
       >
         <div className="flex min-w-0 flex-1 items-center justify-around gap-0.5 sm:justify-evenly">
           {dockLinks.map(({ label, to, icon: Icon, end }) => {
-            const isActive = end ? pathname === to : pathname.startsWith(to);
+            const isActive = end ? pathname === to : isActivePath(pathname, to);
             return (
               <Link
                 key={to}

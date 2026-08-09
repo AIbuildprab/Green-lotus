@@ -45,42 +45,48 @@ export default function GalleryPage() {
   return (
     <>
       <PageHero eyebrow="Gallery" title="Yards we have looked after.">
-        Before-and-after stories plus photos from around Vancouver. Filter by the kind of work, or open any image for a
-        closer look.
+        Real project photos from around Vancouver. Filter by the kind of work, or open any image for a closer look.
       </PageHero>
 
       <ProjectStories />
 
-      <section className="px-5 py-12 lg:py-16">
+      <section className="px-4 py-10 sm:px-5 sm:py-12 lg:py-16">
         <div className="mx-auto max-w-7xl">
           <h2 className="font-display text-2xl font-semibold text-ink sm:text-3xl">All project photos</h2>
-          <div className="mt-6 flex flex-wrap gap-2" role="group" aria-label="Filter gallery by service type">
-            {galleryCategories.map((category) => {
-              const isActive = category === activeCategory;
-              return (
-                <button
-                  key={category}
-                  type="button"
-                  onClick={() => changeCategory(category)}
-                  aria-pressed={isActive}
-                  className={`rounded-md border px-4 py-2 text-sm font-semibold transition ${
-                    isActive
-                      ? "border-lotus-500 bg-lotus-500 text-white"
-                      : "border-ink/15 bg-white text-ink hover:border-lotus-500"
-                  }`}
-                >
-                  {category}
-                </button>
-              );
-            })}
+
+          <div className="-mx-4 mt-5 sm:mx-0 sm:mt-6">
+            <div
+              className="flex gap-2 overflow-x-auto px-4 pb-1 [scrollbar-width:none] sm:flex-wrap sm:overflow-visible sm:px-0 [&::-webkit-scrollbar]:hidden"
+              role="group"
+              aria-label="Filter gallery by service type"
+            >
+              {galleryCategories.map((category) => {
+                const isActive = category === activeCategory;
+                return (
+                  <button
+                    key={category}
+                    type="button"
+                    onClick={() => changeCategory(category)}
+                    aria-pressed={isActive}
+                    className={`shrink-0 rounded-md border px-3.5 py-2 text-sm font-semibold whitespace-nowrap transition sm:px-4 ${
+                      isActive
+                        ? "border-lotus-500 bg-lotus-500 text-white"
+                        : "border-ink/15 bg-white text-ink hover:border-lotus-500"
+                    }`}
+                  >
+                    {category}
+                  </button>
+                );
+              })}
+            </div>
           </div>
 
-          <p className="mt-5 text-sm text-ink/60" role="status">
+          <p className="mt-4 text-sm text-ink/60 sm:mt-5" role="status">
             Showing {visibleItems.length} {visibleItems.length === 1 ? "photo" : "photos"}
             {activeCategory === "All" ? "" : ` in ${activeCategory}`}.
           </p>
 
-          <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+          <div className="mt-6 grid grid-cols-1 gap-3 sm:mt-8 sm:grid-cols-2 sm:gap-4 lg:grid-cols-3">
             {visibleItems.map((item, index) => (
               <button
                 key={item.id}
@@ -89,7 +95,7 @@ export default function GalleryPage() {
                   triggerRefs.current[item.id] = node;
                 }}
                 onClick={() => setActiveIndex(index)}
-                className="group overflow-hidden rounded-md border border-ink/10 bg-white text-left transition hover:-translate-y-1 hover:shadow-soft"
+                className="group overflow-hidden rounded-md border border-ink/10 bg-white text-left transition active:scale-[0.99] hover:-translate-y-1 hover:shadow-soft"
                 aria-label={`Open larger view: ${item.caption}`}
               >
                 <img
@@ -99,13 +105,16 @@ export default function GalleryPage() {
                   height="900"
                   loading="lazy"
                   decoding="async"
-                  className="h-56 w-full object-cover transition group-hover:scale-[1.02]"
+                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                  className="aspect-[4/5] w-full object-cover transition group-hover:scale-[1.02] sm:aspect-[4/3]"
                 />
-                <span className="block p-5">
-                  <span className="text-xs font-semibold uppercase tracking-[0.16em] text-lotus-500">
+                <span className="block p-4 sm:p-5">
+                  <span className="text-[11px] font-semibold uppercase tracking-[0.16em] text-lotus-500 sm:text-xs">
                     {item.category}
                   </span>
-                  <span className="mt-2 block font-semibold text-ink">{item.caption}</span>
+                  <span className="mt-1.5 block text-sm font-semibold leading-snug text-ink sm:mt-2 sm:text-base">
+                    {item.caption}
+                  </span>
                 </span>
               </button>
             ))}

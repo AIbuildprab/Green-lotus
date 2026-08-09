@@ -45,12 +45,15 @@ export default function Lightbox({ items, activeIndex, onClose, onPrev, onNext }
       role="dialog"
       aria-modal="true"
       aria-label={`${item.caption}. Image ${activeIndex + 1} of ${items.length}`}
-      className="fixed inset-0 z-[70] flex items-center justify-center bg-ink-deep/90 p-4"
+      className="fixed inset-0 z-[70] flex items-end justify-center bg-ink-deep/92 p-3 pb-[calc(5.5rem+env(safe-area-inset-bottom))] sm:items-center sm:p-4 sm:pb-4"
       onClick={onClose}
     >
-      <div className="relative w-full max-w-4xl" onClick={(event) => event.stopPropagation()}>
-        <div className="flex items-center justify-between gap-4 pb-3">
-          <p className="text-sm font-semibold text-white/80">
+      <div
+        className="relative flex w-full max-w-4xl flex-col sm:block"
+        onClick={(event) => event.stopPropagation()}
+      >
+        <div className="flex items-center justify-between gap-3 pb-2 sm:gap-4 sm:pb-3">
+          <p className="text-xs font-semibold text-white/80 sm:text-sm">
             {activeIndex + 1} / {items.length}
           </p>
           <button
@@ -71,31 +74,35 @@ export default function Lightbox({ items, activeIndex, onClose, onPrev, onNext }
           height="900"
           loading="eager"
           decoding="async"
-          className="max-h-[70vh] w-full rounded-md bg-white object-contain"
+          className="max-h-[58dvh] w-full rounded-md bg-black/40 object-contain sm:max-h-[70vh]"
         />
 
-        <div className="mt-4 flex items-center justify-between gap-4">
+        <div className="mt-3 flex items-center justify-between gap-2 sm:mt-4 sm:gap-4">
           <button
             type="button"
             onClick={onPrev}
             aria-label="Previous image"
-            className="grid h-12 w-12 place-items-center rounded-md bg-white/10 text-white transition hover:bg-white/20"
+            className="grid h-11 w-11 shrink-0 place-items-center rounded-md bg-white/10 text-white transition hover:bg-white/20 sm:h-12 sm:w-12"
           >
-            <ChevronLeft className="h-6 w-6" aria-hidden="true" />
+            <ChevronLeft className="h-5 w-5 sm:h-6 sm:w-6" aria-hidden="true" />
           </button>
 
-          <div className="text-center">
-            <p className="text-xs font-semibold uppercase tracking-[0.16em] text-lotus-500">{item.category}</p>
-            <p className="mt-1 font-display text-lg font-bold text-white">{item.caption}</p>
+          <div className="min-w-0 flex-1 px-1 text-center">
+            <p className="text-[10px] font-semibold uppercase tracking-[0.16em] text-lotus-500 sm:text-xs">
+              {item.category}
+            </p>
+            <p className="mt-1 font-display text-sm font-bold leading-snug text-white sm:text-lg">
+              {item.caption}
+            </p>
           </div>
 
           <button
             type="button"
             onClick={onNext}
             aria-label="Next image"
-            className="grid h-12 w-12 place-items-center rounded-md bg-white/10 text-white transition hover:bg-white/20"
+            className="grid h-11 w-11 shrink-0 place-items-center rounded-md bg-white/10 text-white transition hover:bg-white/20 sm:h-12 sm:w-12"
           >
-            <ChevronRight className="h-6 w-6" aria-hidden="true" />
+            <ChevronRight className="h-5 w-5 sm:h-6 sm:w-6" aria-hidden="true" />
           </button>
         </div>
       </div>

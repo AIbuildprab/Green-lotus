@@ -12,8 +12,6 @@ export default function QuoteForm() {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    const formData = new FormData(event.currentTarget);
-    console.log("Estimate request:", Object.fromEntries(formData.entries()));
     event.currentTarget.reset();
     setIsSubmitted(true);
   };
