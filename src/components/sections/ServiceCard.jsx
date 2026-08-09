@@ -1,10 +1,10 @@
 import { ArrowRight } from "lucide-react";
-import { Link } from "react-router-dom";
+import Link from "next/link";
 
 export default function ServiceCard({ service }) {
   return (
     <Link
-      to={`/services#${service.slug}`}
+      href={`/services#${service.slug}`}
       className="group relative isolate block min-h-52 overflow-hidden rounded-md bg-ink text-white transition duration-300 hover:-translate-y-0.5 hover:shadow-soft sm:min-h-64 lg:min-h-72"
     >
       <img

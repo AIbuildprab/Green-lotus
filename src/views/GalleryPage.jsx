@@ -1,3 +1,5 @@
+"use client";
+
 import { useCallback, useMemo, useRef, useState } from "react";
 import CallToAction from "../components/sections/CallToAction.jsx";
 import Lightbox from "../components/ui/Lightbox.jsx";

@@ -1,9 +1,8 @@
-import { Outlet } from "react-router-dom";
-import Footer from "./Footer.jsx";
-import Header from "./Header.jsx";
-import StickyGlassNav from "./StickyGlassNav.jsx";
+import Footer from "./Footer";
+import Header from "./Header";
+import StickyGlassNav from "./StickyGlassNav";
 
-export default function Layout() {
+export default function SiteShell({ children }) {
   return (
     <div className="flex min-h-dvh flex-col overflow-x-hidden bg-white">
       <a
@@ -14,7 +13,7 @@ export default function Layout() {
       </a>
       <Header />
       <main id="main" className="flex-1 pb-[calc(6.25rem+env(safe-area-inset-bottom))]">
-        <Outlet />
+        {children}
       </main>
       <Footer />
       <StickyGlassNav />

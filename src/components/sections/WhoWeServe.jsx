@@ -1,8 +1,8 @@
 import { ArrowRight } from "lucide-react";
-import { Link } from "react-router-dom";
-import ButtonLink from "../ui/ButtonLink.jsx";
-import SectionHeader from "../ui/SectionHeader.jsx";
-import { audiences } from "../../data/siteContent.js";
+import Link from "next/link";
+import ButtonLink from "../ui/ButtonLink";
+import SectionHeader from "../ui/SectionHeader";
+import { audiences } from "../../data/siteContent";
 
 export default function WhoWeServe() {
   return (
@@ -37,7 +37,7 @@ export default function WhoWeServe() {
                     Request a quote
                   </ButtonLink>
                   <Link
-                    to={audience.href}
+                    href={audience.href}
                     className="inline-flex items-center gap-2 text-sm font-bold text-white hover:text-lotus-400"
                   >
                     {audience.cta}

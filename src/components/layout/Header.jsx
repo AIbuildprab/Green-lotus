@@ -1,16 +1,27 @@
+"use client";
+
 import { ChevronDown, Menu, Phone, X } from "lucide-react";
+import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
-import { Link, NavLink, useLocation } from "react-router-dom";
-import ButtonLink from "../ui/ButtonLink.jsx";
-import LotusMark from "../ui/LotusMark.jsx";
-import ServicesNavMenu from "./ServicesNavMenu.jsx";
-import { business, navLinks, services } from "../../data/siteContent.js";
+import ButtonLink from "../ui/ButtonLink";
+import LotusMark from "../ui/LotusMark";
+import ServicesNavMenu from "./ServicesNavMenu";
+import { business, navLinks, services } from "../../data/siteContent";
+
+function navLinkClass(isActive) {
+  return `text-sm font-semibold transition duration-300 ${
+    isActive
+      ? "text-ink underline decoration-lotus-500 decoration-2 underline-offset-8"
+      : "text-ink/65 hover:text-ink"
+  }`;
+}
 
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
   const [servicesOpen, setServicesOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
-  const { pathname } = useLocation();
+  const pathname = usePathname();
 
   useEffect(() => {
     setIsOpen(false);
@@ -31,13 +42,6 @@ export default function Header() {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
-  const linkClasses = ({ isActive }) =>
-    `text-sm font-semibold transition duration-300 ${
-      isActive
-        ? "text-ink underline decoration-lotus-500 decoration-2 underline-offset-8"
-        : "text-ink/65 hover:text-ink"
-    }`;
-
   const closeMenu = () => {
     setIsOpen(false);
     setServicesOpen(false);
@@ -52,7 +56,7 @@ export default function Header() {
       }`}
     >
       <div className="mx-auto flex max-w-7xl items-center justify-between gap-3 px-4 py-2.5 sm:gap-4 sm:px-5 sm:py-3">
-        <Link to="/" className="flex min-w-0 items-center gap-2.5 sm:gap-3" aria-label="Green Lotus Landscape home">
+        <Link href="/" className="flex min-w-0 items-center gap-2.5 sm:gap-3" aria-label="Green Lotus Landscape home">
           <span className="grid h-10 w-10 shrink-0 place-items-center rounded-md bg-ink-deep text-lotus-500 sm:h-11 sm:w-11">
             <LotusMark className="h-6 w-6 sm:h-7 sm:w-7" />
           </span>
@@ -71,9 +75,13 @@ export default function Header() {
             link.to === "/services" ? (
               <ServicesNavMenu key={link.to} />
             ) : (
-              <NavLink key={link.to} to={link.to} className={linkClasses} end={link.to === "/"}>
+              <Link
+                key={link.to}
+                href={link.to}
+                className={navLinkClass(link.to === "/" ? pathname === "/" : pathname.startsWith(link.to))}
+              >
                 {link.label}
-              </NavLink>
+              </Link>
             ),
           )}
         </nav>
@@ -129,38 +137,39 @@ export default function Header() {
                 </button>
                 {servicesOpen ? (
                   <div className="animate-expand-in mb-2 grid gap-1 pl-2">
-                    <NavLink
-                      to="/services"
+                    <Link
+                      href="/services"
                       className="rounded-md px-3 py-2.5 text-sm font-semibold text-lotus-600"
                       onClick={closeMenu}
                     >
                       All services overview
-                    </NavLink>
+                    </Link>
                     {services.map((service) => (
-                      <NavLink
+                      <Link
                         key={service.slug}
-                        to={`/services#${service.slug}`}
+                        href={`/services#${service.slug}`}
                         className="rounded-md px-3 py-2.5 text-sm font-semibold text-ink/75"
                         onClick={closeMenu}
                       >
                         {service.title}
-                      </NavLink>
+                      </Link>
                     ))}
                   </div>
                 ) : null}
               </div>
             ) : (
-              <NavLink
+              <Link
                 key={link.to}
-                to={link.to}
-                end={link.to === "/"}
-                className={({ isActive }) =>
-                  `block rounded-md px-3 py-3.5 text-base font-semibold ${isActive ? "bg-paper text-ink" : "text-ink/75"}`
-                }
+                href={link.to}
+                className={`block rounded-md px-3 py-3.5 text-base font-semibold ${
+                  (link.to === "/" ? pathname === "/" : pathname.startsWith(link.to))
+                    ? "bg-paper text-ink"
+                    : "text-ink/75"
+                }`}
                 onClick={closeMenu}
               >
                 {link.label}
-              </NavLink>
+              </Link>
             ),
           )}
           <ButtonLink to="/contact" className="mt-3 w-full" onClick={closeMenu}>

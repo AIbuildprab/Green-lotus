@@ -1,6 +1,8 @@
+"use client";
+
 import { CheckCircle2 } from "lucide-react";
 import { useState } from "react";
-import { estimateOptions, services } from "../../data/siteContent.js";
+import { estimateOptions, services } from "../../data/siteContent";
 
 const fieldClasses =
   "w-full rounded-md border border-ink/15 bg-white px-4 py-3.5 text-base text-ink placeholder:text-ink/40 focus:border-lotus-500 focus:outline-none";

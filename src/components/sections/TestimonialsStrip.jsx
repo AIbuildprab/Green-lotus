@@ -1,8 +1,8 @@
 import { ArrowRight, Star } from "lucide-react";
-import { Link } from "react-router-dom";
-import Reveal from "../ui/Reveal.jsx";
-import TestimonialCard from "./TestimonialCard.jsx";
-import { rating, testimonials } from "../../data/siteContent.js";
+import Link from "next/link";
+import Reveal from "../ui/Reveal";
+import TestimonialCard from "./TestimonialCard";
+import { rating, testimonials } from "../../data/siteContent";
 
 export default function TestimonialsStrip() {
   return (
@@ -44,7 +44,7 @@ export default function TestimonialsStrip() {
             </div>
             <Reveal className="mt-6 sm:mt-8">
               <Link
-                to="/reviews"
+                href="/reviews"
                 className="inline-flex min-h-11 items-center gap-2 text-sm font-semibold text-ink transition hover:text-lotus-500"
               >
                 Read more reviews

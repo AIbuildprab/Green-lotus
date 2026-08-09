@@ -1,3 +1,5 @@
+"use client";
+
 import { ChevronLeft, ChevronRight, X } from "lucide-react";
 import { useEffect, useRef } from "react";
 

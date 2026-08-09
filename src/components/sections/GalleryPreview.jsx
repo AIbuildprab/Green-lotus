@@ -1,6 +1,6 @@
 import { ArrowRight } from "lucide-react";
-import { Link } from "react-router-dom";
-import { galleryItems } from "../../data/siteContent.js";
+import Link from "next/link";
+import { galleryItems } from "../../data/siteContent";
 
 export default function GalleryPreview() {
   const featured = galleryItems.slice(0, 6);
@@ -19,7 +19,7 @@ export default function GalleryPreview() {
             </p>
           </div>
           <Link
-            to="/gallery"
+            href="/gallery"
             className="inline-flex w-fit items-center gap-2 text-sm font-bold text-white hover:text-lotus-400"
           >
             Explore the gallery

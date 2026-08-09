@@ -1,49 +1,33 @@
 # Green Lotus Landscape
 
-A conversion-focused React prototype for a local landscaping company.
+Marketing website for Green Lotus Landscape — lawn care, hedge and garden maintenance, hardscaping, and seasonal cleanups in Vancouver, BC.
 
-## What is included
+## Stack
 
-- React app built with Vite
-- Tailwind CSS design system
-- React Router app shell
-- Lucide React icons
-- Modular functional components
-- Mobile-first landing page
-- Strong phone CTA routing to `tel:6047280246`
-- Services, project examples, process, testimonials, FAQ, and final CTA
-- SEO-friendly document metadata
+- Next.js (App Router)
+- React
+- Tailwind CSS
+- Lucide React
 
 ## Run locally
 
-Install dependencies:
-
 ```bash
 npm install
-```
-
-Start the dev server:
-
-```bash
 npm run dev
 ```
 
-## Before publishing
+Build for production:
 
-Update these placeholders:
+```bash
+npm run build
+npm start
+```
 
-- `[INSERT YEARS]`
-- `[INSERT SEASONAL OFFER]`
-- Real service area
-- Real company email address
-- Real testimonials
-- Real project images
+## Project structure
 
-## Files
-
-- `src/main.jsx` — React entry point
-- `src/App.jsx` — React Router routes
-- `src/pages/HomePage.jsx` — page assembly
-- `src/components/` — small reusable page sections
+- `src/app/` — App Router layouts and routes
+- `src/views/` — page section assemblies
+- `src/components/` — layout, sections, and UI
 - `src/data/siteContent.js` — editable copy and content
-- `src/styles.css` — Tailwind entry and global styles
+- `src/app/globals.css` — Tailwind entry and global styles
+- `public/images/` — brand and service imagery

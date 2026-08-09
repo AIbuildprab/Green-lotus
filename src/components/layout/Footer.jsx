@@ -1,14 +1,14 @@
 import { Clock, Mail, MapPin, Phone } from "lucide-react";
-import { Link } from "react-router-dom";
-import LotusMark from "../ui/LotusMark.jsx";
-import { business, fullAddress, hours, navLinks } from "../../data/siteContent.js";
+import Link from "next/link";
+import LotusMark from "../ui/LotusMark";
+import { business, fullAddress, hours, navLinks } from "../../data/siteContent";
 
 export default function Footer() {
   return (
     <footer id="site-footer" className="bg-ink-deep px-4 py-12 pb-32 text-white sm:px-5 sm:py-14 sm:pb-36">
       <div className="mx-auto grid max-w-7xl gap-10 md:grid-cols-2 lg:grid-cols-4">
         <div>
-          <Link to="/" className="flex items-center gap-3" aria-label="Green Lotus Landscape home">
+          <Link href="/" className="flex items-center gap-3" aria-label="Green Lotus Landscape home">
             <span className="grid h-11 w-11 place-items-center rounded-md bg-white/5 text-lotus-500 ring-1 ring-white/10">
               <LotusMark className="h-7 w-7" />
             </span>
@@ -66,7 +66,7 @@ export default function Footer() {
           <ul className="mt-4 grid gap-2">
             {navLinks.map((link) => (
               <li key={link.to}>
-                <Link to={link.to} className="text-white/70 hover:text-white">
+                <Link href={link.to} className="text-white/70 hover:text-white">
                   {link.label}
                 </Link>
               </li>

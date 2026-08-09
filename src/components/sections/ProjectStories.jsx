@@ -1,7 +1,7 @@
 import { ArrowRight } from "lucide-react";
-import { Link } from "react-router-dom";
-import Reveal from "../ui/Reveal.jsx";
-import { featuredProjects } from "../../data/siteContent.js";
+import Link from "next/link";
+import Reveal from "../ui/Reveal";
+import { featuredProjects } from "../../data/siteContent";
 
 export default function ProjectStories() {
   return (
@@ -18,7 +18,7 @@ export default function ProjectStories() {
             </p>
           </div>
           <Link
-            to="/gallery"
+            href="/gallery"
             className="inline-flex min-h-11 w-fit items-center gap-2 text-sm font-semibold text-ink transition hover:text-lotus-500"
           >
             Browse the full gallery

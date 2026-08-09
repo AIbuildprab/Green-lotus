@@ -1,18 +1,21 @@
+"use client";
+
 import { ChevronDown } from "lucide-react";
+import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { useEffect, useId, useRef, useState } from "react";
-import { Link, NavLink, useLocation } from "react-router-dom";
-import { services } from "../../data/siteContent.js";
+import { services } from "../../data/siteContent";
 
 export default function ServicesNavMenu({ onNavigate }) {
   const [open, setOpen] = useState(false);
   const menuId = useId();
   const rootRef = useRef(null);
-  const { pathname, hash } = useLocation();
+  const pathname = usePathname();
   const isServicesActive = pathname.startsWith("/services");
 
   useEffect(() => {
     setOpen(false);
-  }, [pathname, hash]);
+  }, [pathname]);
 
   useEffect(() => {
     if (!open) return undefined;
@@ -63,7 +66,7 @@ export default function ServicesNavMenu({ onNavigate }) {
           <div className="border-b border-ink/10 bg-paper px-4 py-3">
             <p className="text-xs font-semibold uppercase tracking-[0.14em] text-lotus-600">What we do</p>
             <Link
-              to="/services"
+              href="/services"
               role="menuitem"
               className="mt-1 block text-sm font-semibold text-ink hover:text-lotus-600"
               onClick={() => {
@@ -79,8 +82,8 @@ export default function ServicesNavMenu({ onNavigate }) {
               const Icon = service.icon;
               return (
                 <li key={service.slug}>
-                  <NavLink
-                    to={`/services#${service.slug}`}
+                  <Link
+                    href={`/services#${service.slug}`}
                     role="menuitem"
                     className="flex gap-3 rounded-md px-3 py-3 transition duration-200 hover:bg-paper"
                     onClick={() => {
@@ -95,7 +98,7 @@ export default function ServicesNavMenu({ onNavigate }) {
                       <span className="block text-sm font-semibold text-ink">{service.title}</span>
                       <span className="mt-0.5 block text-xs leading-5 text-ink/65">{service.summary}</span>
                     </span>
-                  </NavLink>
+                  </Link>
                 </li>
               );
             })}

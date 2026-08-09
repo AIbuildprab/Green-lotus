@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import Link from "next/link";
 
 const variants = {
   primary: "bg-lotus-500 text-white shadow-soft hover:bg-lotus-400 hover:-translate-y-0.5",
@@ -18,20 +18,22 @@ export default function ButtonLink({
   variant = "primary",
   size = "md",
   to,
+  href,
   ...props
 }) {
   const classes = `inline-flex items-center justify-center gap-2 rounded-md font-semibold transition duration-300 ease-out ${variants[variant]} ${sizes[size]} ${className}`;
+  const destination = to || href;
 
   if (to) {
     return (
-      <Link to={to} className={classes} {...props}>
+      <Link href={to} className={classes} {...props}>
         {children}
       </Link>
     );
   }
 
   return (
-    <a className={classes} {...props}>
+    <a href={destination} className={classes} {...props}>
       {children}
     </a>
   );

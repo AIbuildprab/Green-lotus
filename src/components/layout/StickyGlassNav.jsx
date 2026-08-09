@@ -1,7 +1,10 @@
+"use client";
+
 import { Home, Images, MessageCircle, Phone, Wrench } from "lucide-react";
+import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
-import { NavLink, useLocation } from "react-router-dom";
-import { business } from "../../data/siteContent.js";
+import { business } from "../../data/siteContent";
 
 const dockLinks = [
   { label: "Home", to: "/", icon: Home, end: true },
@@ -11,7 +14,7 @@ const dockLinks = [
 ];
 
 export default function StickyGlassNav() {
-  const { pathname } = useLocation();
+  const pathname = usePathname();
   const [scrolled, setScrolled] = useState(false);
   const [footerVisible, setFooterVisible] = useState(false);
 
@@ -53,24 +56,24 @@ export default function StickyGlassNav() {
         }`}
       >
         <div className="flex min-w-0 flex-1 items-center justify-around gap-0.5 sm:justify-evenly">
-          {dockLinks.map(({ label, to, icon: Icon, end }) => (
-            <NavLink
-              key={to}
-              to={to}
-              end={end}
-              tabIndex={hidden ? -1 : 0}
-              className={({ isActive }) =>
-                `flex min-h-12 min-w-0 flex-1 flex-col items-center justify-center gap-0.5 rounded-xl px-1.5 py-1.5 text-[10px] font-semibold transition duration-300 sm:min-h-11 sm:flex-row sm:gap-2 sm:px-3 sm:text-sm ${
+          {dockLinks.map(({ label, to, icon: Icon, end }) => {
+            const isActive = end ? pathname === to : pathname.startsWith(to);
+            return (
+              <Link
+                key={to}
+                href={to}
+                tabIndex={hidden ? -1 : 0}
+                className={`flex min-h-12 min-w-0 flex-1 flex-col items-center justify-center gap-0.5 rounded-xl px-1.5 py-1.5 text-[10px] font-semibold transition duration-300 sm:min-h-11 sm:flex-row sm:gap-2 sm:px-3 sm:text-sm ${
                   isActive
                     ? "bg-ink text-white shadow-sm"
                     : "text-ink/65 hover:bg-white/70 hover:text-ink"
-                }`
-              }
-            >
-              <Icon className="h-4 w-4 shrink-0" aria-hidden="true" />
-              <span className="truncate">{label}</span>
-            </NavLink>
-          ))}
+                }`}
+              >
+                <Icon className="h-4 w-4 shrink-0" aria-hidden="true" />
+                <span className="truncate">{label}</span>
+              </Link>
+            );
+          })}
         </div>
 
         <a
