@@ -1,6 +1,6 @@
 import { Clock, Mail, MapPin, Phone } from "lucide-react";
 import Link from "next/link";
-import BrandLogo from "../ui/BrandLogo";
+import LotusMark from "../ui/LotusMark";
 import { business, fullAddress, hours, navLinks } from "../../data/siteContent";
 
 export default function Footer() {
@@ -8,8 +8,16 @@ export default function Footer() {
     <footer id="site-footer" className="bg-ink-deep px-4 py-12 pb-32 text-white sm:px-5 sm:py-14 sm:pb-36 lg:pb-14">
       <div className="mx-auto grid max-w-7xl gap-10 md:grid-cols-2 lg:grid-cols-4">
         <div>
-          <Link href="/" className="inline-flex items-center" aria-label="Green Lotus Landscape home">
-            <BrandLogo className="h-16 w-auto rounded-md ring-1 ring-white/10" />
+          <Link href="/" className="flex items-center gap-3" aria-label="Green Lotus Landscape home">
+            <LotusMark className="h-10 w-auto" />
+            <span>
+              <span className="block font-display text-lg font-semibold leading-none tracking-normal">
+                Green Lotus
+              </span>
+              <span className="mt-0.5 block text-[11px] font-semibold uppercase tracking-[0.16em] text-lotus-500">
+                Landscape
+              </span>
+            </span>
           </Link>
           <p className="mt-5 max-w-xs leading-7 text-white/70">
             The crew that actually shows up. Friendly, reliable landscaping for Vancouver homeowners.

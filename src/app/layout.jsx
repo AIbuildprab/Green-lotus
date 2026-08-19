@@ -6,9 +6,6 @@ export const metadata = {
   title: "Green Lotus Landscape | Landscaping & Lawn Care in Vancouver, BC",
   description:
     "Green Lotus Landscape is the Vancouver landscaping crew that actually shows up. Lawn maintenance, hedge and garden care, hardscaping, and seasonal cleanups. Call 604-728-0246 for a free quote.",
-  icons: {
-    icon: "/images/lotus-mark.svg",
-  },
 };
 
 export const viewport = {
