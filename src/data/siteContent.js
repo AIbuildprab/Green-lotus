@@ -8,7 +8,7 @@ export const business = {
   whatsappHref: `https://wa.me/16047280246?text=${encodeURIComponent(
     "Hi Steven, I'd like a quote for landscaping in Vancouver.",
   )}`,
-  email: "hello@greenlotuslandscape.example",
+  email: "hello@greenlotuslandscapes.ca",
   street: "3432 Cherry St",
   city: "Vancouver",
   region: "BC",
