@@ -141,7 +141,7 @@ export default function QuoteForm() {
           className="flex items-center gap-2 rounded-md bg-white px-4 py-3 font-semibold text-ink ring-1 ring-lotus-500/40"
         >
           <CheckCircle2 className="h-5 w-5 shrink-0 text-lotus-500" aria-hidden="true" />
-          Thanks — we have your estimate request. Steve will call you back shortly.
+          Thanks — we have your estimate request. Steven will call you back shortly.
         </p>
       ) : null}
     </form>

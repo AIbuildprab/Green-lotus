@@ -43,7 +43,7 @@ export default function StickyGlassNav() {
 
   return (
     <div
-      className={`pointer-events-none fixed inset-x-0 bottom-0 z-50 px-3 pb-[max(0.75rem,env(safe-area-inset-bottom))] pt-2 transition duration-500 ease-out sm:px-5 ${
+      className={`pointer-events-none fixed inset-x-0 bottom-0 z-50 px-3 pb-[max(0.75rem,env(safe-area-inset-bottom))] pt-2 transition duration-500 ease-out sm:px-5 lg:hidden ${
         hidden ? "translate-y-[120%] opacity-0" : "animate-bar-up translate-y-0 opacity-100"
       }`}
       aria-hidden={hidden}

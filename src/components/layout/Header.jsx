@@ -58,9 +58,7 @@ export default function Header() {
     >
       <div className="mx-auto flex max-w-7xl items-center justify-between gap-3 px-4 py-2.5 sm:gap-4 sm:px-5 sm:py-3">
         <Link href="/" className="flex min-w-0 items-center gap-2.5 sm:gap-3" aria-label="Green Lotus Landscape home">
-          <span className="grid h-10 w-10 shrink-0 place-items-center rounded-md bg-ink-deep text-lotus-500 sm:h-11 sm:w-11">
-            <LotusMark className="h-6 w-6 sm:h-7 sm:w-7" />
-          </span>
+          <LotusMark className="h-9 w-auto shrink-0 sm:h-10" />
           <span className="min-w-0">
             <span className="block truncate font-display text-base font-semibold leading-none tracking-normal text-ink sm:text-lg">
               Green Lotus

@@ -5,13 +5,13 @@ import PageHero from "../components/ui/PageHero.jsx";
 import RatingBadge from "../components/ui/RatingBadge.jsx";
 import SectionHeader from "../components/ui/SectionHeader.jsx";
 import TestimonialCard from "../components/sections/TestimonialCard.jsx";
-import { business, rating, testimonials } from "../data/siteContent.js";
+import { business, google, rating, testimonials } from "../data/siteContent.js";
 
 export default function ReviewsPage() {
   return (
     <>
       <PageHero eyebrow="Reviews" title={`${rating.score} stars from ${rating.count} Vancouver neighbours.`}>
-        Real Google reviews from homeowners and neighbours who have worked with Steve and the crew.
+        Real Google reviews from homeowners and neighbours who have worked with Steven and the crew.
       </PageHero>
 
       <section className="px-5 py-12 lg:py-16">
@@ -29,26 +29,32 @@ export default function ReviewsPage() {
               <RatingBadge tone="dark" className="mt-5" />
             </div>
 
-            <div
-              id="google-reviews-widget"
-              className="grid min-h-[16rem] place-items-center rounded-md border border-dashed border-ink/20 bg-paper p-8 text-center"
-            >
-              <div>
-                <span className="mx-auto grid h-12 w-12 place-items-center rounded-md bg-white">
-                  <Star className="h-6 w-6 fill-lotus-500 text-lotus-500" aria-hidden="true" />
-                </span>
-                <p className="mt-4 font-display text-xl font-bold text-ink">Google reviews embed</p>
-                <p className="mt-2 max-w-md text-ink/70">
-                  Paste your Google Business reviews widget here to show live ratings from all {rating.count} reviews.
-                </p>
+            <div id="google-reviews-widget" className="overflow-hidden rounded-md border border-ink/10">
+              <iframe
+                title="Google map and reviews for Green Lotus Landscapes"
+                src={google.embedSrc}
+                className="h-72 w-full border-0 lg:h-80"
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+                allowFullScreen
+              />
+              <div className="flex flex-wrap items-center justify-between gap-3 bg-paper px-4 py-3">
                 <ButtonLink
-                  href="https://www.google.com/search?q=Green+Lotus+Landscape+Vancouver"
+                  href={google.listingUrl}
                   target="_blank"
                   rel="noopener noreferrer"
                   variant="secondary"
-                  className="mt-5"
+                  className="w-full sm:w-auto"
                 >
-                  View on Google
+                  View reviews
+                </ButtonLink>
+                <ButtonLink
+                  href={google.listingUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-full sm:w-auto"
+                >
+                  Leave a review
                 </ButtonLink>
               </div>
             </div>
@@ -81,7 +87,7 @@ export default function ReviewsPage() {
           </div>
           <div className="flex flex-col gap-3 sm:flex-row">
             <ButtonLink
-              href="https://www.google.com/search?q=Green+Lotus+Landscape+Vancouver"
+              href={google.listingUrl}
               target="_blank"
               rel="noopener noreferrer"
               variant="secondary"

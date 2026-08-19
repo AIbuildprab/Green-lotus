@@ -9,7 +9,7 @@ import { business, differentiators, images } from "../data/siteContent.js";
 export default function AboutPage() {
   return (
     <>
-      <PageHero eyebrow="About us" title="A local crew, led by Steve.">
+      <PageHero eyebrow="About us" title="A local crew, led by Steven.">
         Green Lotus Landscape has been looking after Vancouver yards for {business.yearsInBusiness}. We are small on
         purpose, so the person who quotes your job is the person who stands behind it.
       </PageHero>
@@ -18,7 +18,7 @@ export default function AboutPage() {
         <div className="mx-auto grid max-w-7xl items-center gap-12 lg:grid-cols-2">
           <div>
             <SectionHeader eyebrow="Our story" title="Built on neighbours telling neighbours." align="left">
-              Steve started Green Lotus with a simple idea: answer the phone, show up when you said you would, and
+              Steven started Green Lotus with a simple idea: answer the phone, show up when you said you would, and
               leave the property better than you found it. That is still the whole business plan.
             </SectionHeader>
 
@@ -88,7 +88,7 @@ export default function AboutPage() {
 
       <CallToAction
         title="Want to meet the crew?"
-        body="Give Steve a call. He will walk the property with you and tell you straight what it needs."
+        body="Give Steven a call. He will walk the property with you and tell you straight what it needs."
       />
     </>
   );

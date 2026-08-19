@@ -1,6 +1,7 @@
 import Footer from "./Footer";
 import Header from "./Header";
 import StickyGlassNav from "./StickyGlassNav";
+import WhatsAppButton from "./WhatsAppButton";
 
 export default function SiteShell({ children }) {
   return (
@@ -12,11 +13,12 @@ export default function SiteShell({ children }) {
         Skip to main content
       </a>
       <Header />
-      <main id="main" className="flex-1 pb-[calc(6.25rem+env(safe-area-inset-bottom))]">
+      <main id="main" className="flex-1 pb-[calc(6.25rem+env(safe-area-inset-bottom))] lg:pb-0">
         {children}
       </main>
       <Footer />
       <StickyGlassNav />
+      <WhatsAppButton />
     </div>
   );
 }

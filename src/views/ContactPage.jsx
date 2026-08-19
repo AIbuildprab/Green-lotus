@@ -5,14 +5,13 @@ import QuoteForm from "../components/sections/QuoteForm.jsx";
 import RatingBadge from "../components/ui/RatingBadge.jsx";
 import { business, fullAddress, hours } from "../data/siteContent.js";
 
-const mapSrc =
-  "https://www.openstreetmap.org/export/embed.html?bbox=-123.055%2C49.235%2C-123.025%2C49.255&layer=mapnik&marker=49.245%2C-123.040";
+const mapSrc = `https://maps.google.com/maps?q=${encodeURIComponent(fullAddress)}&z=15&output=embed`;
 
 export default function ContactPage() {
   return (
     <>
       <PageHero eyebrow="Contact" title="Get a free landscaping estimate.">
-        Call for the fastest answer, or send the estimate form and Steve will call you back. Free quotes, no pressure.
+        Call for the fastest answer, or send the estimate form and Steven will call you back. Free quotes, no pressure.
       </PageHero>
 
       <section className="px-4 py-10 sm:px-5 sm:py-12 lg:py-16">

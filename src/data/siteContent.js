@@ -2,9 +2,12 @@ import { BrickWall, Leaf, Shovel, Trees } from "lucide-react";
 
 export const business = {
   name: "Green Lotus Landscape",
-  owner: "Steve",
+  owner: "Steven",
   phoneDisplay: "604-728-0246",
   phoneHref: "tel:6047280246",
+  whatsappHref: `https://wa.me/16047280246?text=${encodeURIComponent(
+    "Hi Steven, I'd like a quote for landscaping in Vancouver.",
+  )}`,
   email: "hello@greenlotuslandscape.example",
   street: "3432 Cherry St",
   city: "Vancouver",
@@ -17,7 +20,7 @@ export const business = {
 };
 
 export const brand = {
-  logo: "/images/logo.png",
+  logo: "/images/logo.svg",
   mark: "/images/lotus-mark.svg",
   markAlt: "Green Lotus Landscape logo",
 };
@@ -28,6 +31,13 @@ export const rating = {
   score: "4.9",
   count: 19,
   source: "Google",
+};
+
+export const google = {
+  listingUrl:
+    "https://www.google.com/maps/place/Green+Lotus+Landscapes/@49.2342521,-123.0322748,17z/data=!4m8!3m7!1s0x548676918f56d06f:0xdf92bc35573e7a61!8m2!3d49.2342521!4d-123.0322748!9m1!1b1",
+  embedSrc:
+    "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d1303!2d-123.0322748!3d49.2342521!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x548676918f56d06f%3A0xdf92bc35573e7a61!2sGreen%20Lotus%20Landscapes!5e0!3m2!1sen!2sca",
 };
 
 export const hours = [
@@ -95,7 +105,7 @@ export const services = [
     bestFor: "Properties with hedges, shrubs, or beds that need shaping and seasonal care.",
     timing: "As needed through the growing season",
     description:
-      "Hedges and shrubs get away from you fast on the coast. We shape hedges cleanly, prune with the plant's health in mind, and keep beds looking cared for through the growing season. If you are not sure what needs cutting back, Steve will walk it with you and say so plainly.",
+      "Hedges and shrubs get away from you fast on the coast. We shape hedges cleanly, prune with the plant's health in mind, and keep beds looking cared for through the growing season. If you are not sure what needs cutting back, Steven will walk it with you and say so plainly.",
     points: [
       "Hedge trimming and shaping",
       "Seasonal pruning for shrubs and small trees",
@@ -287,7 +297,7 @@ export const galleryCategories = [
 export const testimonials = [
   {
     quote:
-      "Amazing work by Steven and his crew. They’ve done a fantastic job with my yard, including: weeding, hedge trimming, lawn maintenance, and even repaired an old rotten retaining wall using large concrete garden blocks. I’m very happy with their work and how efficiently they get the work done. My yard, hedge and new retaining wall look great. I even had them help my parents with their yard. Thank you, Steve and crew for all the hard work!",
+      "Amazing work by Steven and his crew. They’ve done a fantastic job with my yard, including: weeding, hedge trimming, lawn maintenance, and even repaired an old rotten retaining wall using large concrete garden blocks. I’m very happy with their work and how efficiently they get the work done. My yard, hedge and new retaining wall look great. I even had them help my parents with their yard. Thank you, Steven and crew for all the hard work!",
     name: "Lars",
     context: "Google review",
     date: "Jul 2026",
@@ -303,7 +313,7 @@ export const testimonials = [
   },
   {
     quote:
-      "We’ve had Steve’s Green Lotus Landscapes for many years. He keeps his words as promised and gets job done. He is well responsive to our requests and we are happy with his service. Thank you, Steve.",
+      "We’ve had Steven’s Green Lotus Landscapes for many years. He keeps his words as promised and gets job done. He is well responsive to our requests and we are happy with his service. Thank you, Steven.",
     name: "Yvonne Peck",
     context: "Google review",
     date: "Jul 2026",
@@ -311,7 +321,7 @@ export const testimonials = [
   },
   {
     quote:
-      "Steve’s team was great to work with right from the beginning. Great communication with the introduction, getting a quote, the work itself and cleanup after. Honest and professional service. Would recommend!! We had our tall cedar hedges trimmed.",
+      "Steven’s team was great to work with right from the beginning. Great communication with the introduction, getting a quote, the work itself and cleanup after. Honest and professional service. Would recommend!! We had our tall cedar hedges trimmed.",
     name: "Michael Luong",
     context: "Google review",
     date: "Jun 2026",
@@ -319,7 +329,7 @@ export const testimonials = [
   },
   {
     quote:
-      "Steve and his crew have helped me with a number of different landscaping jobs. They always do a great job. I highly recommend Steve and his team.",
+      "Steven and his crew have helped me with a number of different landscaping jobs. They always do a great job. I highly recommend Steven and his team.",
     name: "Danny Duong",
     context: "Google review",
     date: "Jun 2026",
@@ -335,7 +345,7 @@ export const testimonials = [
   },
   {
     quote:
-      "Steve and his crew have been taking care of our building’s lawn and garden for about 4 years now and do a great job making the grounds look good. On a couple of occasions we had large fallen tree branches that had to be cleared and they came promptly and took care of cleaning out all the debris. We highly recommend them.",
+      "Steven and his crew have been taking care of our building’s lawn and garden for about 4 years now and do a great job making the grounds look good. On a couple of occasions we had large fallen tree branches that had to be cleared and they came promptly and took care of cleaning out all the debris. We highly recommend them.",
     name: "Maria Paz Torres",
     context: "Google review",
     date: "May 2026",
@@ -343,7 +353,7 @@ export const testimonials = [
   },
   {
     quote:
-      "Steve and his team provide professional services at reasonable rates. The best thing is I can depend on them showing up to mow our lawn every bi-weekly which I appreciate a lot. They also do the annual pre and post season landscaping clean up for us. Outstanding results everytime!",
+      "Steven and his team provide professional services at reasonable rates. The best thing is I can depend on them showing up to mow our lawn every bi-weekly which I appreciate a lot. They also do the annual pre and post season landscaping clean up for us. Outstanding results everytime!",
     name: "Bonnie Yeung",
     context: "Local Guide · Google",
     date: "May 2026",
@@ -351,7 +361,7 @@ export const testimonials = [
   },
   {
     quote:
-      "Always a top notch job. Steve cares about his work and by extension, his clients. Our neighborhood is having more visits from Steve and his team due to the quality of his work.",
+      "Always a top notch job. Steven cares about his work and by extension, his clients. Our neighborhood is having more visits from Steven and his team due to the quality of his work.",
     name: "Andrew Lloyd",
     context: "Google review",
     date: "May 2026",
@@ -438,7 +448,7 @@ export const faqs = [
   {
     question: "Can you work with our strata?",
     answer:
-      "We do. Steve handles the quote and communication with council or the property manager, and we keep a simple paper trail for invoices and schedules.",
+      "We do. Steven handles the quote and communication with council or the property manager, and we keep a simple paper trail for invoices and schedules.",
   },
   {
     question: "What happens to green waste?",
@@ -453,7 +463,7 @@ export const faqs = [
   {
     question: "Do I need to be home?",
     answer:
-      "Not for routine visits once access is sorted. For the first quote walkthrough, it helps if someone can meet Steve on site.",
+      "Not for routine visits once access is sorted. For the first quote walkthrough, it helps if someone can meet Steven on site.",
   },
   {
     question: "Are estimates really free?",
@@ -526,7 +536,7 @@ export const processSteps = [
   },
   {
     title: "Walk the property",
-    body: "Steve visits, walks it with you, and listens before recommending anything.",
+    body: "Steven visits, walks it with you, and listens before recommending anything.",
   },
   {
     title: "Clear free quote",
