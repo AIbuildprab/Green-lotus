@@ -2,10 +2,33 @@ import HashScroll from "@/components/layout/HashScroll";
 import SiteShell from "@/components/layout/SiteShell";
 import "./globals.css";
 
+const siteTitle =
+  "Green Lotus Landscape | Landscaping & Lawn Care in Vancouver, BC";
+const siteDescription =
+  "Green Lotus Landscape is the Vancouver landscaping crew that actually shows up. Lawn maintenance, hedge and garden care, hardscaping, and seasonal cleanups. Call 604-728-0246 for a free quote.";
+
 export const metadata = {
-  title: "Green Lotus Landscape | Landscaping & Lawn Care in Vancouver, BC",
-  description:
-    "Green Lotus Landscape is the Vancouver landscaping crew that actually shows up. Lawn maintenance, hedge and garden care, hardscaping, and seasonal cleanups. Call 604-728-0246 for a free quote.",
+  metadataBase: new URL("https://www.greenlotuslandscapes.ca"),
+  title: siteTitle,
+  description: siteDescription,
+  openGraph: {
+    type: "website",
+    url: "/",
+    title: siteTitle,
+    description: siteDescription,
+    images: [
+      {
+        url: "/images/cover-image.png",
+        alt: "Green Lotus Landscape — Vancouver lawn care and landscaping",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: siteTitle,
+    description: siteDescription,
+    images: ["/images/cover-image.png"],
+  },
 };
 
 export const viewport = {
