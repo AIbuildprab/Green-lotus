@@ -1,6 +1,7 @@
-import { Check, Clock3, Phone, Target } from "lucide-react";
+import { Check, Clock3, Target } from "lucide-react";
 import ButtonLink from "../ui/ButtonLink.jsx";
-import { business } from "../../data/siteContent.js";
+import WhatsAppIcon from "../ui/WhatsAppIcon.jsx";
+import { getWhatsAppQuoteHref } from "../../data/siteContent.js";
 
 export default function ServiceSection({ service, reversed = false }) {
   const Icon = service.icon;
@@ -55,11 +56,13 @@ export default function ServiceSection({ service, reversed = false }) {
 
           <div className="mt-7 flex flex-col gap-2.5 sm:mt-8 sm:flex-row">
             <ButtonLink
-              href={business.phoneHref}
-              aria-label={`Call Green Lotus Landscape for a free quote on ${service.title}`}
+              href={getWhatsAppQuoteHref(service.title)}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label={`Message Green Lotus on WhatsApp for a quote on ${service.title}`}
               className="w-full sm:w-auto"
             >
-              <Phone className="h-4 w-4" aria-hidden="true" />
+              <WhatsAppIcon className="h-4 w-4" />
               Get a quote
             </ButtonLink>
             <ButtonLink to="/contact" variant="secondary" className="w-full sm:w-auto">

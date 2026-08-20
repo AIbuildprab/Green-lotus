@@ -27,6 +27,11 @@ export default function Footer() {
         <div>
           <h2 className="font-display text-base font-bold">Contact</h2>
           <div className="mt-4 grid gap-3 text-white/70">
+            <p className="font-semibold text-white">{business.name}</p>
+            <p className="flex items-start gap-2">
+              <MapPin className="mt-1 h-4 w-4 shrink-0 text-lotus-500" aria-hidden="true" />
+              {fullAddress}
+            </p>
             <a
               href={business.phoneHref}
               aria-label="Call Green Lotus Landscape"
@@ -39,10 +44,6 @@ export default function Footer() {
               <Mail className="h-4 w-4 shrink-0 text-lotus-500" aria-hidden="true" />
               {business.email}
             </a>
-            <p className="flex items-start gap-2">
-              <MapPin className="mt-1 h-4 w-4 shrink-0 text-lotus-500" aria-hidden="true" />
-              {fullAddress}
-            </p>
           </div>
         </div>
 

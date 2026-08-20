@@ -2,7 +2,7 @@ import { ArrowRight } from "lucide-react";
 import Link from "next/link";
 import ButtonLink from "../ui/ButtonLink";
 import SectionHeader from "../ui/SectionHeader";
-import { audiences } from "../../data/siteContent";
+import { audiences, business } from "../../data/siteContent";
 
 export default function WhoWeServe() {
   return (
@@ -33,7 +33,13 @@ export default function WhoWeServe() {
                 <h3 className="font-display text-3xl font-semibold tracking-tight">{audience.title}</h3>
                 <p className="mt-3 max-w-md leading-7 text-white/80">{audience.body}</p>
                 <div className="mt-6 flex flex-wrap gap-3">
-                  <ButtonLink to="/contact" size="md">
+                  <ButtonLink
+                    href={business.whatsappHref}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    size="md"
+                    aria-label="Message Green Lotus on WhatsApp for a quote"
+                  >
                     Request a quote
                   </ButtonLink>
                   <Link

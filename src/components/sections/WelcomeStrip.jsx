@@ -36,7 +36,14 @@ export default function WelcomeStrip() {
             <ButtonLink to="/about" size="lg">
               Meet the crew
             </ButtonLink>
-            <ButtonLink to="/contact" variant="secondary" size="lg">
+            <ButtonLink
+              href={business.whatsappHref}
+              target="_blank"
+              rel="noopener noreferrer"
+              variant="secondary"
+              size="lg"
+              aria-label="Message Green Lotus on WhatsApp for a free quote"
+            >
               Get a free quote
             </ButtonLink>
           </div>

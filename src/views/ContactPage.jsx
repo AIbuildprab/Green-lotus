@@ -3,9 +3,7 @@ import FaqSection from "../components/sections/FaqSection.jsx";
 import PageHero from "../components/ui/PageHero.jsx";
 import QuoteForm from "../components/sections/QuoteForm.jsx";
 import RatingBadge from "../components/ui/RatingBadge.jsx";
-import { business, fullAddress, hours } from "../data/siteContent.js";
-
-const mapSrc = `https://maps.google.com/maps?q=${encodeURIComponent(fullAddress)}&z=15&output=embed`;
+import { business, fullAddress, google, hours } from "../data/siteContent.js";
 
 export default function ContactPage() {
   return (
@@ -91,16 +89,17 @@ export default function ContactPage() {
 
             <div className="overflow-hidden rounded-md border border-ink/10">
               <iframe
-                title={`Map showing ${fullAddress}`}
-                src={mapSrc}
+                title="Google map for Green Lotus Landscape"
+                src={google.embedSrc}
                 className="h-64 w-full border-0 lg:h-72"
                 loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"
+                allowFullScreen
               />
               <div className="flex items-center justify-between gap-3 bg-paper px-4 py-3 text-sm">
                 <p className="font-semibold text-ink">{fullAddress}</p>
                 <a
-                  href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(fullAddress)}`}
+                  href={google.listingUrl}
                   target="_blank"
                   rel="noreferrer"
                   className="shrink-0 font-bold text-lotus-600 hover:text-lotus-500"

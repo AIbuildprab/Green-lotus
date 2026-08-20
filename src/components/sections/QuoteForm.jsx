@@ -9,15 +9,48 @@ const fieldClasses =
 
 export default function QuoteForm() {
   const [isSubmitted, setIsSubmitted] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [error, setError] = useState("");
 
-  const handleSubmit = (event) => {
+  const handleSubmit = async (event) => {
     event.preventDefault();
-    event.currentTarget.reset();
-    setIsSubmitted(true);
+    const form = event.currentTarget;
+    const payload = Object.fromEntries(new FormData(form));
+
+    setError("");
+    setIsSubmitting(true);
+
+    try {
+      const response = await fetch("/api/quote", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(payload),
+      });
+      const result = await response.json().catch(() => ({}));
+
+      if (!response.ok) {
+        throw new Error(result.error || "Could not send your estimate request.");
+      }
+
+      form.reset();
+      setIsSubmitted(true);
+    } catch (submitError) {
+      setError(
+        submitError instanceof Error && submitError.message
+          ? submitError.message
+          : "Could not send your estimate request. Please call us instead.",
+      );
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
-    <form onSubmit={handleSubmit} className="grid gap-4 rounded-md border border-ink/10 bg-paper p-5 sm:p-6 lg:p-8">
+    <form
+      onSubmit={handleSubmit}
+      className="grid gap-4 rounded-md border border-ink/10 bg-paper p-5 sm:p-6 lg:p-8"
+      aria-busy={isSubmitting}
+    >
       <div>
         <h2 className="font-display text-xl font-semibold text-ink sm:text-2xl">Get a free estimate</h2>
         <p className="mt-2 leading-7 text-ink/75">
@@ -123,17 +156,31 @@ export default function QuoteForm() {
         />
       </label>
 
+      <div className="sr-only" aria-hidden="true">
+        <label>
+          Company
+          <input type="text" name="company" tabIndex={-1} autoComplete="off" />
+        </label>
+      </div>
+
       <button
         type="submit"
-        className="mt-2 inline-flex min-h-12 w-full items-center justify-center rounded-md bg-lotus-500 px-6 py-3 font-semibold text-white transition hover:bg-lotus-400 sm:w-auto"
+        disabled={isSubmitting}
+        className="mt-2 inline-flex min-h-12 w-full items-center justify-center rounded-md bg-lotus-500 px-6 py-3 font-semibold text-white transition hover:bg-lotus-400 disabled:cursor-not-allowed disabled:opacity-70 sm:w-auto"
       >
-        Request my free estimate
+        {isSubmitting ? "Sending…" : "Request my free estimate"}
       </button>
 
       <p className="text-sm text-ink/60">
         No online pricing calculator — every estimate comes after we understand the property. This form just gets you
         in the queue faster.
       </p>
+
+      {error ? (
+        <p role="alert" className="rounded-md bg-white px-4 py-3 text-sm font-semibold text-red-700 ring-1 ring-red-200">
+          {error}
+        </p>
+      ) : null}
 
       {isSubmitted ? (
         <p

@@ -1,6 +1,6 @@
 import { Phone } from "lucide-react";
 import ButtonLink from "../ui/ButtonLink.jsx";
-import { business, images } from "../../data/siteContent.js";
+import { business, images, seo } from "../../data/siteContent.js";
 
 export default function Hero() {
   return (
@@ -21,14 +21,11 @@ export default function Hero() {
 
       <div className="mx-auto flex min-h-[72dvh] max-w-7xl flex-col justify-end px-4 pb-24 pt-20 sm:min-h-[78dvh] sm:justify-center sm:px-5 sm:pb-20 lg:min-h-[88vh] lg:pb-24 lg:pt-24">
         <p className="animate-rise font-display text-xs font-semibold uppercase tracking-[0.18em] text-lotus-500 sm:text-sm sm:tracking-[0.2em]">
-          Vancouver, BC
+          {business.name}
         </p>
 
         <h1 className="animate-rise-delay-1 mt-4 max-w-4xl font-display text-[2.5rem] font-semibold leading-[1.05] tracking-tight sm:mt-5 sm:text-6xl lg:text-7xl">
-          Green Lotus
-          <span className="mt-1.5 block text-xl font-medium uppercase tracking-[0.14em] text-white/80 sm:mt-2 sm:text-3xl sm:tracking-[0.16em] lg:text-4xl">
-            Landscape
-          </span>
+          {seo.h1}
         </h1>
 
         <p className="animate-rise-delay-2 mt-4 max-w-xl text-base leading-7 text-white/80 sm:mt-6 sm:text-xl sm:leading-8">

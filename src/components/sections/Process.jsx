@@ -7,7 +7,7 @@ export default function Process() {
     <section className="bg-paper px-4 py-12 sm:px-5 sm:py-16 lg:py-24">
       <div className="mx-auto max-w-7xl">
         <Reveal>
-          <SectionHeader eyebrow="How we work" title="We'll be there every step of the way.">
+          <SectionHeader as="h3" eyebrow="How we work" title="We'll be there every step of the way.">
             The same routine on every job, whether it is a one-time cleanup or a standing bi-weekly visit.
           </SectionHeader>
         </Reveal>

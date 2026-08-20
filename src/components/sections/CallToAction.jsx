@@ -6,7 +6,9 @@ import { business, images } from "../../data/siteContent.js";
 export default function CallToAction({
   title = "Ready to get your yard handled?",
   body = `Free estimates, no pressure. Ask about ${business.seasonalOffer} when you call.`,
+  headingLevel = "h2",
 }) {
+  const Heading = headingLevel;
   return (
     <section className="relative isolate overflow-hidden px-4 pb-6 pt-2 sm:px-5 sm:pb-8 sm:pt-4 lg:pb-16">
       <Reveal className="relative mx-auto max-w-7xl overflow-hidden rounded-md bg-ink-deep text-white">
@@ -21,9 +23,9 @@ export default function CallToAction({
         <div className="flex flex-col justify-between gap-6 p-6 sm:gap-8 sm:p-8 md:flex-row md:items-center lg:p-12">
           <div>
             <p className="text-xs font-semibold uppercase tracking-[0.16em] text-lotus-500">Free estimate</p>
-            <h2 className="mt-3 max-w-2xl font-display text-[1.75rem] font-semibold leading-tight sm:text-3xl lg:text-4xl">
+            <Heading className="mt-3 max-w-2xl font-display text-[1.75rem] font-semibold leading-tight sm:text-3xl lg:text-4xl">
               {title}
-            </h2>
+            </Heading>
             <p className="mt-3 max-w-2xl text-sm leading-7 text-white/75 sm:mt-4 sm:text-base">{body}</p>
           </div>
           <div className="flex w-full flex-col gap-2.5 sm:w-auto sm:flex-row md:flex-col lg:flex-row">

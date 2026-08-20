@@ -1,7 +1,8 @@
 import { ArrowRight } from "lucide-react";
 import Link from "next/link";
 
-export default function ServiceCard({ service }) {
+export default function ServiceCard({ service, headingLevel = "h3" }) {
+  const Heading = headingLevel;
   return (
     <Link
       href={`/services#${service.slug}`}
@@ -20,7 +21,7 @@ export default function ServiceCard({ service }) {
       <div className="absolute inset-0 -z-10 bg-gradient-to-t from-black via-black/55 to-black/20 transition duration-500 group-hover:from-black/95" />
 
       <div className="flex h-full min-h-44 flex-col justify-end p-4 sm:min-h-64 sm:p-6 lg:min-h-72">
-        <h3 className="font-display text-lg font-semibold tracking-tight sm:text-2xl">{service.title}</h3>
+        <Heading className="font-display text-lg font-semibold tracking-tight sm:text-2xl">{service.title}</Heading>
         <p className="mt-1.5 line-clamp-2 text-sm leading-6 text-white/80 sm:mt-2">{service.summary}</p>
         <span className="mt-3 inline-flex items-center gap-2 text-sm font-semibold text-lotus-400 sm:mt-5">
           Learn more

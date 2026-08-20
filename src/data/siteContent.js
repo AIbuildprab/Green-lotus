@@ -1,14 +1,21 @@
 import { BrickWall, Leaf, Shovel, Trees } from "lucide-react";
 
+const WHATSAPP_NUMBER = "16047280246";
+
+export function getWhatsAppQuoteHref(serviceTitle) {
+  const text = serviceTitle
+    ? `Hi Steven, I'd like a quote for ${serviceTitle}.`
+    : "Hi Steven, I'd like a quote for landscaping in Vancouver.";
+  return `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(text)}`;
+}
+
 export const business = {
   name: "Green Lotus Landscape",
   owner: "Steven",
   phoneDisplay: "604-728-0246",
   phoneHref: "tel:6047280246",
-  whatsappHref: `https://wa.me/16047280246?text=${encodeURIComponent(
-    "Hi Steven, I'd like a quote for landscaping in Vancouver.",
-  )}`,
-  email: "hello@greenlotuslandscapes.ca",
+  whatsappHref: getWhatsAppQuoteHref(),
+  email: "greenlotuslandscapes@gmail.com",
   street: "3432 Cherry St",
   city: "Vancouver",
   region: "BC",
@@ -27,6 +34,36 @@ export const brand = {
 
 export const fullAddress = `${business.street}, ${business.city}, ${business.region} ${business.postalCode}`;
 
+export const seo = {
+  h1: "Landscaper Vancouver",
+  servicesH2: "Lawn Care, Hedge Trimming, Hardscaping & Seasonal Cleanups",
+  title:
+    "BEST Landscaper Vancouver - if you're looking for Landscaping Services near me or Lawn Care, Hedge Trimming, Hardscaping & Seasonal Cleanups near me - Green Lotus Landscape is the place to be",
+  description:
+    "Green Lotus Landscape is the Vancouver landscaping crew that actually shows up. Lawn maintenance, hedge and garden care, hardscaping, and seasonal cleanups. Call 604-728-0246 for a free quote.",
+  pages: {
+    services: {
+      title:
+        "BEST Landscaping Services Vancouver - Lawn Care, Hedge Trimming, Hardscaping & Seasonal Cleanups near me - Green Lotus Landscape",
+    },
+    contact: {
+      title:
+        "Contact Green Lotus Landscape Vancouver - Landscaper near me for a free landscaping quote | 604-728-0246",
+    },
+    about: {
+      title:
+        "About Green Lotus Landscape - Landscaper Vancouver | Local lawn care and landscaping crew since 2014",
+    },
+    gallery: {
+      title:
+        "Landscaping Gallery Vancouver - Lawn Care, Hedge Trimming, Hardscaping & Seasonal Cleanups | Green Lotus Landscape",
+    },
+    reviews: {
+      title: "Green Lotus Landscape Reviews Vancouver - 4.9 stars from neighbours | Landscaper near me",
+    },
+  },
+};
+
 export const rating = {
   score: "4.9",
   count: 19,
@@ -41,7 +78,12 @@ export const google = {
 };
 
 export const hours = [
-  { days: "Monday – Saturday", time: "7:00 AM – 6:00 PM" },
+  { days: "Monday", time: "7:00 AM – 6:00 PM" },
+  { days: "Tuesday", time: "7:00 AM – 6:00 PM" },
+  { days: "Wednesday", time: "7:00 AM – 6:00 PM" },
+  { days: "Thursday", time: "7:00 AM – 6:00 PM" },
+  { days: "Friday", time: "7:00 AM – 6:00 PM" },
+  { days: "Saturday", time: "7:00 AM – 6:00 PM" },
   { days: "Sunday", time: "Closed" },
 ];
 

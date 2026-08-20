@@ -10,9 +10,9 @@ export default function ProjectStories() {
         <Reveal className="mb-8 flex flex-col justify-between gap-4 sm:mb-10 sm:gap-6 lg:flex-row lg:items-end">
           <div>
             <p className="text-xs font-semibold uppercase tracking-[0.16em] text-lotus-600">Project stories</p>
-            <h2 className="mt-3 max-w-2xl font-display text-[1.75rem] font-semibold tracking-tight text-ink sm:text-3xl lg:text-4xl">
+            <h3 className="mt-3 max-w-2xl font-display text-[1.75rem] font-semibold tracking-tight text-ink sm:text-3xl lg:text-4xl">
               Before and after, neighbourhood by neighbourhood.
-            </h2>
+            </h3>
             <p className="mt-3 max-w-xl text-sm leading-7 text-ink/75 sm:mt-4 sm:text-base">
               A look at the kind of transformations we deliver around Vancouver.
             </p>

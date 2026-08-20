@@ -94,7 +94,12 @@ export default function Header() {
             <Phone className="h-4 w-4 text-lotus-500" aria-hidden="true" />
             {business.phoneDisplay}
           </a>
-          <ButtonLink to="/contact" aria-label="Request a free landscaping quote">
+          <ButtonLink
+            href={business.whatsappHref}
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Message Green Lotus on WhatsApp for a free landscaping quote"
+          >
             Request a quote
           </ButtonLink>
         </div>
@@ -169,7 +174,13 @@ export default function Header() {
               </Link>
             ),
           )}
-          <ButtonLink to="/contact" className="mt-3 w-full" onClick={closeMenu}>
+          <ButtonLink
+            href={business.whatsappHref}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="mt-3 w-full"
+            onClick={closeMenu}
+          >
             Request a quote
           </ButtonLink>
         </nav>

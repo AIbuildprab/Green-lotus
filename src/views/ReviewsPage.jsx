@@ -1,5 +1,6 @@
-import { Phone, Star } from "lucide-react";
+import { Star } from "lucide-react";
 import ButtonLink from "../components/ui/ButtonLink.jsx";
+import WhatsAppIcon from "../components/ui/WhatsAppIcon.jsx";
 import CallToAction from "../components/sections/CallToAction.jsx";
 import PageHero from "../components/ui/PageHero.jsx";
 import RatingBadge from "../components/ui/RatingBadge.jsx";
@@ -94,8 +95,13 @@ export default function ReviewsPage() {
             >
               Leave a review
             </ButtonLink>
-            <ButtonLink href={business.phoneHref} aria-label="Call Green Lotus Landscape for a free quote">
-              <Phone className="h-4 w-4" aria-hidden="true" />
+            <ButtonLink
+              href={business.whatsappHref}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Message Green Lotus on WhatsApp for a free quote"
+            >
+              <WhatsAppIcon className="h-4 w-4" />
               Free quote
             </ButtonLink>
           </div>

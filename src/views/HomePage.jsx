@@ -17,7 +17,7 @@ export default function HomePage() {
       <TestimonialsStrip />
       <Process />
       <ServiceAreaNote />
-      <CallToAction />
+      <CallToAction headingLevel="h3" />
     </>
   );
 }

@@ -11,9 +11,9 @@ export default function TestimonialsStrip() {
         <div className="grid gap-8 lg:grid-cols-[280px_1fr] lg:items-end lg:gap-10">
           <Reveal>
             <p className="text-xs font-semibold uppercase tracking-[0.16em] text-lotus-600">Reviews</p>
-            <h2 className="mt-3 font-display text-[1.75rem] font-semibold tracking-tight text-ink sm:text-3xl lg:text-4xl">
+            <h3 className="mt-3 font-display text-[1.75rem] font-semibold tracking-tight text-ink sm:text-3xl lg:text-4xl">
               See what customers are saying.
-            </h2>
+            </h3>
             <div className="mt-5 flex items-center gap-5 rounded-md bg-ink-deep p-5 text-white sm:mt-6 sm:block sm:p-6">
               <div>
                 <p className="text-xs font-semibold uppercase tracking-[0.14em] text-lotus-400 sm:text-sm">
