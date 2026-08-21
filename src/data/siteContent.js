@@ -41,25 +41,44 @@ export const seo = {
     "BEST Landscaper Vancouver - if you're looking for Landscaping Services near me or Lawn Care, Hedge Trimming, Hardscaping & Seasonal Cleanups near me - Green Lotus Landscape is the place to be",
   description:
     "Green Lotus Landscape is the Vancouver landscaping crew that actually shows up. Lawn maintenance, hedge and garden care, hardscaping, and seasonal cleanups. Call 604-728-0246 for a free quote.",
+  keywords: [
+    "landscaper Vancouver",
+    "landscaping services near me",
+    "lawn care Vancouver",
+    "hedge trimming Vancouver",
+    "hardscaping Vancouver",
+    "seasonal cleanup Vancouver",
+    "Green Lotus Landscape",
+  ],
   pages: {
     services: {
       title:
         "BEST Landscaping Services Vancouver - Lawn Care, Hedge Trimming, Hardscaping & Seasonal Cleanups near me - Green Lotus Landscape",
+      description:
+        "Vancouver landscaping services from Green Lotus Landscape: lawn care, hedge trimming, hardscaping, and seasonal cleanups. Same small crew every visit. Call 604-728-0246.",
     },
     contact: {
       title:
         "Contact Green Lotus Landscape Vancouver - Landscaper near me for a free landscaping quote | 604-728-0246",
+      description:
+        "Request a free landscaping quote in Vancouver. Call or text 604-728-0246, WhatsApp Steven, or send the estimate form — Green Lotus Landscape answers as the same local crew.",
     },
     about: {
       title:
         "About Green Lotus Landscape - Landscaper Vancouver | Local lawn care and landscaping crew since 2014",
+      description:
+        "Green Lotus Landscape has been the Vancouver neighbour crew since 2014. Steven and the same small team handle lawn care, hedges, hardscaping, and seasonal cleanups.",
     },
     gallery: {
       title:
         "Landscaping Gallery Vancouver - Lawn Care, Hedge Trimming, Hardscaping & Seasonal Cleanups | Green Lotus Landscape",
+      description:
+        "See Green Lotus Landscape work around Vancouver: lawns, hedges, hardscaping, and seasonal cleanups. Real jobs from the local crew at 3432 Cherry St.",
     },
     reviews: {
       title: "Green Lotus Landscape Reviews Vancouver - 4.9 stars from neighbours | Landscaper near me",
+      description:
+        "Green Lotus Landscape is 4.9 stars on Google from Vancouver neighbours. Read reviews, find us on the map, and call 604-728-0246 for a landscaping quote.",
     },
   },
 };
@@ -75,6 +94,8 @@ export const google = {
     "https://www.google.com/maps/place/Green+Lotus+Landscapes/@49.2342521,-123.0322748,17z/data=!4m8!3m7!1s0x548676918f56d06f:0xdf92bc35573e7a61!8m2!3d49.2342521!4d-123.0322748!9m1!1b1",
   embedSrc:
     "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d1303!2d-123.0322748!3d49.2342521!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x548676918f56d06f%3A0xdf92bc35573e7a61!2sGreen%20Lotus%20Landscapes!5e0!3m2!1sen!2sca",
+  lat: 49.2342521,
+  lng: -123.0322748,
 };
 
 export const hours = [

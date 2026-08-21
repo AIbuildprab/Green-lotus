@@ -1,18 +1,11 @@
 import HomePage from "@/views/HomePage";
 import { seo } from "@/data/siteContent";
+import { pageMetadata } from "@/lib/pageMetadata";
 
-export const metadata = {
+export const metadata = pageMetadata({
   title: seo.title,
   description: seo.description,
-  openGraph: {
-    url: "/",
-    title: seo.title,
-    description: seo.description,
-  },
-  twitter: {
-    title: seo.title,
-    description: seo.description,
-  },
-};
+  path: "/",
+});
 
 export default HomePage;

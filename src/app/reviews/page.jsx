@@ -1,12 +1,11 @@
 import ReviewsPage from "@/views/ReviewsPage";
 import { seo } from "@/data/siteContent";
+import { pageMetadata } from "@/lib/pageMetadata";
 
-const title = seo.pages.reviews.title;
-
-export const metadata = {
-  title,
-  openGraph: { url: "/reviews", title },
-  twitter: { title },
-};
+export const metadata = pageMetadata({
+  title: seo.pages.reviews.title,
+  description: seo.pages.reviews.description,
+  path: "/reviews",
+});
 
 export default ReviewsPage;

@@ -1,12 +1,11 @@
 import ContactPage from "@/views/ContactPage";
 import { seo } from "@/data/siteContent";
+import { pageMetadata } from "@/lib/pageMetadata";
 
-const title = seo.pages.contact.title;
-
-export const metadata = {
-  title,
-  openGraph: { url: "/contact", title },
-  twitter: { title },
-};
+export const metadata = pageMetadata({
+  title: seo.pages.contact.title,
+  description: seo.pages.contact.description,
+  path: "/contact",
+});
 
 export default ContactPage;

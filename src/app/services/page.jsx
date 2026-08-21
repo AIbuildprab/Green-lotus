@@ -1,12 +1,11 @@
 import ServicesPage from "@/views/ServicesPage";
 import { seo } from "@/data/siteContent";
+import { pageMetadata } from "@/lib/pageMetadata";
 
-const title = seo.pages.services.title;
-
-export const metadata = {
-  title,
-  openGraph: { url: "/services", title },
-  twitter: { title },
-};
+export const metadata = pageMetadata({
+  title: seo.pages.services.title,
+  description: seo.pages.services.description,
+  path: "/services",
+});
 
 export default ServicesPage;
