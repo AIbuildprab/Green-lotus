@@ -12,8 +12,8 @@ export default function HomePage() {
     <>
       <Hero />
       <TrustBar />
-      <ServicesOverview />
       <ProjectStories />
+      <ServicesOverview />
       <TestimonialsStrip />
       <Process />
       <ServiceAreaNote />

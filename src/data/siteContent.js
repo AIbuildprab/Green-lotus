@@ -230,6 +230,50 @@ export const services = [
 // Homepage service-card covers (1, 3, 5, 9) stay off this list so the gallery feels distinct.
 export const galleryItems = [
   {
+    id: "project-21",
+    src: "/images/gallery/21.jpg",
+    alt: "Finished concrete block retaining wall holding a paver patio, with a cedar hedge and fence behind",
+    caption: "New block wall under a rebuilt patio",
+    category: "Hardscaping",
+    featured: true,
+  },
+  {
+    id: "project-22",
+    src: "/images/gallery/22.jpg",
+    alt: "New split-face block retaining wall along a wooden fence, with gravel and square stepping stones",
+    caption: "Side-yard wall with a gravel stepping-stone path",
+    category: "Hardscaping",
+    featured: true,
+  },
+  {
+    id: "project-23",
+    src: "/images/gallery/23.jpg",
+    alt: "Concrete block retaining wall supporting a checkerboard paver patio beside a house",
+    caption: "Patio wall rebuilt in block beside the house",
+    category: "Hardscaping",
+  },
+  {
+    id: "project-24",
+    src: "/images/gallery/24.jpg",
+    alt: "Collapsed timber retaining wall with soil and gravel spilled onto the driveway",
+    caption: "Timber wall that had given way under the patio",
+    category: "Hardscaping",
+  },
+  {
+    id: "project-25",
+    src: "/images/gallery/25.jpg",
+    alt: "Rotting timber retaining wall under a paver patio, with weeds growing through the boards",
+    caption: "Old timber wall rotting out under the patio",
+    category: "Hardscaping",
+  },
+  {
+    id: "project-26",
+    src: "/images/gallery/26.jpg",
+    alt: "Weathered wooden planter box filled with ferns along a lattice fence",
+    caption: "Aging timber planter along the fence line",
+    category: "Hardscaping",
+  },
+  {
     id: "project-4",
     src: "/images/gallery/4.jpg",
     alt: "Multi-level Vancouver backyard with wooden stairs, seating deck, and manicured lawn",
@@ -462,6 +506,30 @@ export const testimonials = [
 ];
 
 export const featuredProjects = [
+  {
+    id: "story-wall",
+    title: "Failed wall, rebuilt in block",
+    neighbourhood: "Vancouver",
+    service: "Hardscaping",
+    scope:
+      "A timber wall under the patio had collapsed. We cleared the failed boards, rebuilt it in concrete block with a cap and drainage, and set the pavers back on top.",
+    before: "/images/gallery/24.jpg",
+    after: "/images/gallery/21.jpg",
+    beforeAlt: "Collapsed timber retaining wall with soil spilled onto the driveway",
+    afterAlt: "Finished concrete block retaining wall holding the rebuilt paver patio",
+  },
+  {
+    id: "story-side-yard",
+    title: "Planter replaced with a block wall",
+    neighbourhood: "Vancouver",
+    service: "Hardscaping",
+    scope:
+      "The rotting timber planter along the fence came out. In its place we built a split-face block wall with a cap, and left the gravel path and stepping stones in place.",
+    before: "/images/gallery/26.jpg",
+    after: "/images/gallery/22.jpg",
+    beforeAlt: "Weathered timber planter filled with ferns along a lattice fence",
+    afterAlt: "New block retaining wall beside a gravel path with square stepping stones",
+  },
   {
     id: "story-sod",
     title: "Fresh sod, same day",
