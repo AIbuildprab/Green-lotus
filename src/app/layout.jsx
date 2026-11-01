@@ -1,4 +1,5 @@
 import { Analytics } from "@vercel/analytics/next";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 import HashScroll from "@/components/layout/HashScroll";
 import SiteShell from "@/components/layout/SiteShell";
 import { google, seo } from "@/data/siteContent";
@@ -69,6 +70,7 @@ export default function RootLayout({ children }) {
         <HashScroll />
         <SiteShell>{children}</SiteShell>
         <Analytics />
+        <SpeedInsights />
       </body>
     </html>
   );
